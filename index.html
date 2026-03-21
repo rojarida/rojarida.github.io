@@ -17,7 +17,17 @@
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <ul class="nav-links">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="site-menu">
           <li>
             <a href="#home" class="nav-link">
               <i class="fa-solid fa-house"></i>
@@ -98,7 +108,7 @@
                 <div class="discord-wrapper">
                   <button
                     type="button"
-                    class="discord-copy-button discord-link"
+                    class="discord-button discord-link"
                     aria-label="Copy Discord username"
                     data-discord="romanjay"
                   >
