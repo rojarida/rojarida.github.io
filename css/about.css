@@ -54,7 +54,7 @@
 
 .about-title {
   margin: 0 0 3rem;
-  font-size: clamp(1rem, 1.25rem + 0.8vw, 1.5rem);
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.5rem);
   text-align: center;
 }
 
@@ -62,7 +62,15 @@
   margin: 0;
   color: #444444;
   line-height: 1.7;
+  font-size: 1.2rem;
   text-align: center;
+}
+
+@media (max-width: 1700px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(280px, 360px));
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
