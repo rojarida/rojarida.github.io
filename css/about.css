@@ -4,24 +4,6 @@
   padding: 5rem 0;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.section-title {
-  margin: 0 0 1rem;
-  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
-  line-height: 1.1;
-}
-
-.section-description {
-  margin: 0;
-  color: #555555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(260px, 350px));
@@ -84,12 +66,31 @@
 }
 
 @media (max-width: 768px) {
+  .about-section {
+    min-height: auto;
+    padding: 4rem 1.25rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 2rem;
   }
 
   .about-card {
     width: min(100%, 380px);
+    padding: 2rem 1.5rem;
+  }
+
+  .about-title {
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
   }
 }
