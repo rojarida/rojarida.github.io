@@ -53,11 +53,11 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
-  background-color: rgba(255, 106, 0, 1.0);
-  color: #000000;
-  border: 2px solid #000000;
+  padding: .85rem 1rem;
+  border-radius: 999px;
+  background-color: rgba(255, 106, 0, 0.75);
+  color: #222222;
+  border: 2px solid #333333;
   font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
@@ -69,12 +69,12 @@
 
 .certification-button:hover {
   transform: translateY(-4px);
-  opacity: 0.80;
+  background-color: rgba(255, 106, 0, 0.50);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .certification-button:active {
-  background-color: rgba(255, 106, 0, 0.6);
+  background-color: rgba(255, 106, 0, 1);
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
