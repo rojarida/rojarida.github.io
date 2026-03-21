@@ -18,11 +18,15 @@
   line-height: 1.05;
 }
 
+.intro-name {
+  color: rgba(255, 106, 0, 1);
+}
+
 .intro-subheading {
   margin: 0 0 1rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #666666;
+  color: #444444;
 }
 
 .intro-description {
@@ -154,6 +158,10 @@
 
   .intro-heading {
     font-size: clamp(2.5rem, 10vw, 3rem);
+  }
+
+  .intro-name {
+    display: block;
   }
 
   .intro-subheading {
