@@ -1,0 +1,95 @@
+.about-section {
+  min-height: calc(100vh - var(--header-height));
+  background-color: rgba(250, 250, 250, 1);
+  padding: 5rem 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.section-description {
+  margin: 0;
+  color: #555555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(260px, 350px));
+  justify-content: center;
+  gap: 4rem;
+}
+
+.detail-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.detail-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: #111111;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.overview-icon {
+  background-color: #002EAD;
+}
+
+.location-icon {
+  background-color: #00660C;
+}
+
+.goals-icon {
+  background-color: #AB8E00;
+}
+
+.hobbies-icon {
+  background-color: #AD3E3E;
+}
+
+.detail-icon i {
+  font-size: 2rem;
+}
+
+.detail-title {
+  margin: 0 0 3rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.detail-text {
+  margin: 0;
+  color: #444444;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .detail-card {
+    width: min(100%, 380px);
+  }
+}
