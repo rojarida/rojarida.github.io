@@ -6,4 +6,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initDiscordCopy();
   initScrollSpy();
   initMobileNav();
-})
+});

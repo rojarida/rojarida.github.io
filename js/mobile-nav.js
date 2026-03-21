@@ -1,33 +1,50 @@
 export function initMobileNav() {
   const siteNav = document.querySelector(".site-nav");
   const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-link");
+  const menuIcon = menuToggle?.querySelector("i");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  if (!siteNav || !menuToggle) return;
+  if (!siteNav || !menuToggle || !menuIcon) return;
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("menu-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  })
+  function openMenu() {
+    siteNav.classList.add("menu-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-xmark");
+  }
+
+  function closeMenu() {
+    siteNav.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuIcon.classList.remove("fa-xmark");
+    menuIcon.classList.add("fa-bars");
+  }
+
+  menuToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    if (siteNav.classList.contains("menu-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
 
   navLinks.forEach((navLink) => {
     navLink.addEventListener("click", () => {
-      siteNav.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      closeMenu();
     });
   });
 
   document.addEventListener("click", (event) => {
     if (!siteNav.contains(event.target)) {
-      siteNav.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      closeMenu();
     }
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
-      siteNav.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      closeMenu();
     }
-  })
+  });
 }
