@@ -5,7 +5,7 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(360px, 360px));
+  grid-template-columns: repeat(4, minmax(320px, 360px));
   justify-content: center;
   gap: 3rem;
   align-items: stretch;
@@ -68,6 +68,19 @@
   background-color: #555555;
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1700px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, minmax(300px, 340px));
+    gap: 2rem;
+  }
+
+  .certification-meta {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
 }
 
 @media (max-width: 768px) {
