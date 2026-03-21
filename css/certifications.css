@@ -5,52 +5,61 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(320px, 360px));
+  grid-template-columns: repeat(4, minmax(260px, 350px));
   justify-content: center;
-  gap: 3rem;
-  align-items: stretch;
+  gap: 4rem;
 }
 
 .certification-card {
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
   border-radius: 16px;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
   text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 550px;
 }
 
 .cisco-certification-logo,
 .comptia-certification-logo {
   width: 150px;
   height: 150px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .certification-title {
   margin: 0 0 3rem;
-  font-size: clamp(1.5rem, 1.4rem + 1vw, 2rem);
-  line-height: 1.2;
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.5rem);
+  text-align: center;
 }
 
 .certification-meta {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  margin: 0;
+  color: #444444;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.certification-meta:last-of-type {
+  margin-bottom: 3rem;
 }
 
 .certification-button {
-  display: inline-block;
-  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  background-color: #111111;
-  color: #FFFFFF;
+  border-radius: 30px;
+  background-color: rgba(255, 106, 0, 1.0);
+  color: #000000;
+  border: 2px solid #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-decoration: none;
   transition:
     background-color 0.2s ease,
@@ -60,25 +69,20 @@
 
 .certification-button:hover {
   transform: translateY(-4px);
-  opacity: 0.75;
+  opacity: 0.80;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .certification-button:active {
-  background-color: #555555;
+  background-color: rgba(255, 106, 0, 0.6);
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 1700px) {
   .certifications-grid {
-    grid-template-columns: repeat(2, minmax(300px, 340px));
+    grid-template-columns: repeat(2, minmax(280px, 360px));
     gap: 2rem;
-  }
-
-  .certification-meta {
-    font-size: 1.15rem;
-    line-height: 1.5;
   }
 
 }
@@ -96,7 +100,6 @@
 
   .certification-card {
     width: min(100%, 380px);
-    min-height: auto;
     padding: 2rem 1.5rem;
   }
 
@@ -112,17 +115,13 @@
   }
 
   .certification-meta {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.5;
-  }
-
-  .certification-meta:last-of-type {
-    margin-bottom: 2rem;
   }
 
   .certification-button {
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     font-size: 1.1rem;
   }
 }
