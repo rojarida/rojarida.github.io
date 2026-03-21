@@ -4,32 +4,14 @@
   padding: 5rem 0;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.section-title {
-  margin: 0 0 1rem;
-  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
-  line-height: 1.1;
-}
-
-.section-description {
-  margin: 0;
-  color: #555555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.details-grid {
+.about-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(260px, 350px));
   justify-content: center;
   gap: 4rem;
 }
 
-.detail-card {
+.about-card {
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
   border-radius: 16px;
@@ -37,7 +19,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
 }
 
-.detail-icon {
+.about-icon {
   width: 70px;
   height: 70px;
   margin: 0 auto 1rem;
@@ -66,30 +48,57 @@
   background-color: #AD3E3E;
 }
 
-.detail-icon i {
+.about-icon i {
   font-size: 2rem;
 }
 
-.detail-title {
+.about-title {
   margin: 0 0 3rem;
-  font-size: clamp(1rem, 1.25rem + 0.8vw, 1.5rem);
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.5rem);
   text-align: center;
 }
 
-.detail-text {
+.about-text {
   margin: 0;
   color: #444444;
   line-height: 1.7;
+  font-size: 1.2rem;
   text-align: center;
 }
 
-@media (max-width: 900px) {
-  .details-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
+@media (max-width: 1700px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(280px, 360px));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    min-height: auto;
+    padding: 4rem 1.25rem;
   }
 
-  .detail-card {
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  .about-card {
     width: min(100%, 380px);
+    padding: 2rem 1.5rem;
+  }
+
+  .about-title {
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
   }
 }

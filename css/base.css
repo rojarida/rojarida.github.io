@@ -39,7 +39,35 @@ section {
   scroll-margin-top: var(--header-height);
 }
 
+.section-heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+  line-height: 1.1;
+}
+
+.section-description {
+  margin: 0;
+  color: #555555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 .placeholder-section {
   padding: 4rem 0;
   border-top: 1px solid #E5E5E5;
+}
+
+@media (max-width: 768px) {
+  .page-width {
+    width: min(1100px, calc(100% - 2.5rem));
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
 }
