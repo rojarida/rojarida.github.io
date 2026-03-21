@@ -7,14 +7,14 @@
 
 .intro-layout {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.4fr 0.7fr;
   gap: 3rem;
   align-items: center;
 }
 
 .intro-heading {
   margin: 0 0 1rem;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 2.2rem + 2.5vw, 4rem);
   line-height: 1.05;
 }
 
@@ -29,7 +29,7 @@
   margin: 0 0 3rem;
   max-width: 600px;
   font-size: 1.1rem;
-  line-ehgiht: 1.7;
+  line-height: 1.7;
   color: #444444;
 }
 

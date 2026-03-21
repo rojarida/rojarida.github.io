@@ -5,9 +5,9 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 310px));
+  grid-template-columns: repeat(4, minmax(360px, 360px));
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   align-items: stretch;
 }
 
@@ -15,28 +15,33 @@
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 550px;
 }
 
 .cisco-certification-logo,
 .comptia-certification-logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
 }
 
 .certification-title {
-  margin: 0 0 1rem;
+  margin: 0 0 3rem;
+  font-size: clamp(1.5rem, 1.4rem + 1vw, 2rem);
+  line-height: 1.2;
 }
 
 .certification-meta {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .certification-button {
