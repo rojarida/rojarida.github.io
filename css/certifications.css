@@ -70,13 +70,46 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 4rem 1.25rem;
+  }
+
   .certifications-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 2rem;
   }
 
   .certification-card {
     width: min(100%, 380px);
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .cisco-certification-logo,
+  .comptia-certification-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .certification-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .certification-meta {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .certification-meta:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .certification-button {
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.1rem;
   }
 }
