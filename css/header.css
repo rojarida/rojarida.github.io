@@ -81,6 +81,12 @@
     justify-content: center;
   }
 
+  .menu-toggle i {
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
   .nav-links {
     position: absolute;
     top: calc(100% + 0.75rem);
@@ -111,7 +117,11 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transofmr: translateY(0);
+    transform: translateY(0);
+  }
+
+  .site-nav.menu-open .menu-toggle i {
+    transform: rotate(90deg);
   }
 
   .nav-link {

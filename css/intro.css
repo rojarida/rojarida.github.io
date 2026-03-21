@@ -133,7 +133,7 @@
 @media (max-width: 768px) {
   .intro-section {
     min-height: calc(100svh - var(--header-height));
-    padding: 2.5rem 1.25rem;
+    padding: 1rem 2rem;
   }
 
   .intro-layout {
