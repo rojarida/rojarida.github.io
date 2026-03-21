@@ -1,0 +1,77 @@
+.certifications-section {
+  min-height: calc(100vh - var(--header-height));
+  padding: 5rem 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 310px));
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.certification-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.cisco-certification-logo,
+.comptia-certification-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.certification-title {
+  margin: 0 0 1rem;
+}
+
+.certification-meta {
+  margin: 0 0 0.75rem;
+}
+
+.certification-button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  background-color: #111111;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.certification-button:hover {
+  transform: translateY(-4px);
+  opacity: 0.75;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.certification-button:active {
+  background-color: #555555;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .certification-card {
+    width: min(100%, 380px);
+  }
+}
