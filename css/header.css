@@ -5,7 +5,9 @@
   width: 100%;
   height: var(--header-height);
   background-color: rgba(247, 247, 247, 0.9);
+  backdrop-filter: blur(2px);
   border-bottom: 1px solid #CCCCCC;
+  z-index: 1000;
 }
 
 .site-nav {
