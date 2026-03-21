@@ -26,7 +26,7 @@
 }
 
 .intro-description {
-  margin: 0 0 2rem;
+  margin: 0 0 3rem;
   max-width: 600px;
   font-size: 1.1rem;
   line-ehgiht: 1.7;
@@ -34,32 +34,90 @@
 }
 
 .social-section {
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-label {
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-weight: 600;
 }
 
 .social-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.social-links a {
+.social-links a,
+.social-links button {
+  background: none;
+  border: none;
+  padding: 0;
   text-decoration: none;
-  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
-.social-links a:hover {
-  text-decoration: underline;
+.social-links a:hover,
+.social-links button:hover {
+  transform: translateY(-4px);
+  opacity: 0.75;
+}
+
+.github-link {
+  color: #2B3137;
+}
+
+.linkedin-link {
+  color: #0A66C2;
+}
+
+.discord-link {
+  color: #5865F2;
 }
 
 .image-section {
   display: flex;
   justify-content: center;
+}
+
+.social-links a i,
+.social-links button i {
+  font-size: 2.5rem;
+}
+
+.discord-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord-tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background-color: #111111;
+  color: #FFFFFF;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.discord-tooltip.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .profile-image {
