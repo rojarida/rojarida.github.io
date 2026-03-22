@@ -134,6 +134,32 @@
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1700px) {
+  .intro-section {
+    min-height: calc(100svh - var(--header-height));
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .intro-layout {
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+  }
+
+  .intro-heading {
+    font-size: clamp(2.75rem, 4vw, 3.5rem);
+  }
+
+  .intro-subheading {
+    font-size: 1.2rem;
+  }
+
+  .profile-image {
+    width: min(320px, 100%);
+  }
+}
+
 @media (max-width: 768px) {
   .intro-section {
     min-height: calc(100svh - var(--header-height));

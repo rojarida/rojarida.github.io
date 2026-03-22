@@ -6,7 +6,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(260px, 350px));
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
   justify-content: center;
   gap: 4rem;
 }
