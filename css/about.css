@@ -1,7 +1,7 @@
 .about-section {
   min-height: calc(100vh - var(--header-height));
   background-color: rgba(250, 250, 250, 1);
-  padding: 5rem 0;
+  padding: 2rem 0rem;
 }
 
 .about-grid {
@@ -76,7 +76,7 @@
 @media (max-width: 768px) {
   .about-section {
     min-height: auto;
-    padding: 4rem 0.75rem;
+    padding: 2rem 0rem;
   }
 
   .section-heading {
@@ -96,8 +96,8 @@
 
     width: 100%;
     max-width: none;
-    min-height: 25rem;
-    padding: 2rem 1.5rem;
+    min-height: 22rem;
+    padding: 2rem 1rem;
   }
 
   .about-title {
