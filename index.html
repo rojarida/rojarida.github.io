@@ -8,6 +8,7 @@
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/intro.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/skills.css" rel="stylesheet" />
     <link href="css/certifications.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -218,15 +219,37 @@
 
           <div class="skills-grid">
             <article class="skill-card">
-              <h3 class="skill-name">Python</h3>
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-solid fa-network-wired"></i>
+                  Networking
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">TCP/IP</span>
+                  <span class="skill-badge">Subnetting</span>
+                  <span class="skill-badge">DHCP</span>
+                  <span class="skill-badge">DNS</span>
+                  <span class="skill-badge">Routing</span>
+                  <span class="skill-badge">Switching</span>
+                  <span class="skill-badge">VLANs</span>
+                  <span class="skill-badge">NAT</span>
+                  <span class="skill-badge">VPNs</span>
+                  <span class="skill-badge">Firewalls</span>
+                </div>
+              </div>
             </article>
-
           </div>
-
-
         </div>
       </section>
-
 
       <section class="certifications-section" id="certifications">
         <div class="page-width wide">
