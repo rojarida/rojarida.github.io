@@ -12,8 +12,8 @@
 }
 
 .about-card {
-  background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  background-color: rgba(240, 240, 240, 1);
+  border: 1px solid rgba(200, 200, 200, 1);
   border-radius: 16px;
   padding: 3rem 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);

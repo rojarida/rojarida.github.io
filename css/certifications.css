@@ -1,5 +1,6 @@
 .certifications-section {
   min-height: calc(100vh - var(--header-height));
+  background-color: rgba(250, 250, 250, 1);
   padding: 5rem 0;
 }
 
