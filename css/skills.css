@@ -1,6 +1,6 @@
 .skills-section {
   min-height: calc(100vh - var(--header-height));
-  padding: 6rem 1.5rem;
+  padding: 2rem 0rem;
 }
 
 .skills-grid {
