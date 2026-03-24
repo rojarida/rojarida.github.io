@@ -3,13 +3,33 @@ export function initSkillCards() {
 
   if (!skillCards.length) return;
 
-  function closeCard(skillCard) {
+  function scrollToCard(skillCard) {
+    const header = document.querySelector(".site-header");
+    const headerOffset = header ? header.offsetHeight : 0;
+    const cardTop = skillCard.getBoundingClientRect().top + window.scrollY;
+    const topPosition = cardTop - headerOffset - 16;
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: "smooth",
+    });
+  }
+
+  function closeCard(skillCard, options = {}) {
+    const { scrollBack = false } = options;
+
     const toggleButton = skillCard.querySelector(".skill-card-toggle");
     const content = skillCard.querySelector(".skill-card-content");
 
     skillCard.classList.remove("open");
     toggleButton.setAttribute("aria-expanded", "false");
     content.style.maxHeight = null;
+
+    if (scrollBack) {
+      requestAnimationFrame(() => {
+        scrollToCard(skillCard);
+      });
+    }
   }
 
   function openCard(skillCard) {
@@ -23,13 +43,26 @@ export function initSkillCards() {
 
   skillCards.forEach((skillCard) => {
     const toggleButton = skillCard.querySelector(".skill-card-toggle");
+    const content = skillCard.querySelector(".skill-card-content")
 
     toggleButton.addEventListener("click", () => {
       const isOpen = skillCard.classList.contains("open");
 
-      skillCards.forEach((card) => closeCard(card));
+      skillCards.forEach((card) => {
+        if (card !== skillCard) closeCard(card);
+      });
 
-      if (!isOpen) openCard(skillCard);
+      if (isOpen) {
+        closeCard(skillCard, { scrollBack: true });
+      } else {
+        openCard(skillCard);
+      }
+
+    });
+
+    content.addEventListener("click", () => {
+      if (event.target.closest(".skill-badge")) return;
+      closeCard(skillCard, { scrollBack: true });
     });
   });
 
