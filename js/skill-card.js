@@ -48,10 +48,6 @@ export function initSkillCards() {
     toggleButton.addEventListener("click", () => {
       const isOpen = skillCard.classList.contains("open");
 
-      skillCards.forEach((card) => {
-        if (card !== skillCard) closeCard(card);
-      });
-
       if (isOpen) {
         closeCard(skillCard, { scrollBack: true });
       } else {
@@ -60,7 +56,7 @@ export function initSkillCards() {
 
     });
 
-    content.addEventListener("click", () => {
+    content.addEventListener("click", (event) => {
       if (event.target.closest(".skill-badge")) return;
       closeCard(skillCard, { scrollBack: true });
     });
@@ -69,9 +65,9 @@ export function initSkillCards() {
   window.addEventListener("resize", () => {
     const openCardElement = document.querySelector(".skill-card.open");
 
-    if (!openCardElement) return;
-
-    const content = openCardElement.querySelector(".skill-card-content");
-    content.style.maxHeight = `${content.scrollHeight}px`;
+    openCards.forEach((openCardElement) => {
+      const content = openCardElement.querySelector(".skill-card-content");
+      content.style.maxHeight = `${content.scrollHeight}px`;
+    });
   });
 }
