@@ -31,6 +31,11 @@ a {
   margin: 0 auto;
 }
 
+.page-width.wide {
+  width: min(1700px, calc(100% - 6rem));
+  margin: 0 auto;
+}
+
 main {
   padding-top: var(--header-height);
 }
@@ -40,13 +45,14 @@ section {
 }
 
 .section-heading {
+  margin: 0 auto 3rem;
   text-align: center;
   margin-bottom: 5rem;
 }
 
 .section-title {
   margin: 0 0 1rem;
-  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+  font-size: clamp(1.75rem, 1.5rem + 3vw, 3.5rem);
   line-height: 1.1;
 }
 
@@ -60,14 +66,4 @@ section {
 .placeholder-section {
   padding: 4rem 0;
   border-top: 1px solid #E5E5E5;
-}
-
-@media (max-width: 768px) {
-  .page-width {
-    width: min(1100px, calc(100% - 2.5rem));
-  }
-
-  .section-heading {
-    margin-bottom: 3rem;
-  }
 }

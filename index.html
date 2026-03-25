@@ -8,15 +8,17 @@
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/intro.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/skills.css" rel="stylesheet" />
     <link href="css/certifications.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
     <link
-      href="assets/favicon.png"
+      href="assets/favicon.ico"
       rel="icon"
-      type="image/png"
+      type="image/x-icon"
     />
   </head>
   <body>
@@ -48,6 +50,13 @@
           </li>
 
           <li>
+            <a href="#skills" class="nav-link">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <span>Skills</span>
+            </a>
+          </li>
+
+          <li>
             <a href="#certifications" class="nav-link">
               <i class="fa-solid fa-certificate"></i>
               <span>Certifications</span>
@@ -61,12 +70,6 @@
             </a>
           </li>
 
-          <li>
-            <a href="#contact" class="nav-link">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Contact</span>
-            </a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -80,7 +83,7 @@
             </h1>
 
             <p class="intro-subheading">
-              Aspiring Network Engineer
+              Aspiring IT Professional
             </p>
 
             <p class="intro-description">
@@ -92,6 +95,17 @@
               <p class="social-label">Connect with me:</p>
 
               <div class="social-links">
+                <a
+                  href="mailto:romanjaydavid@gmail.com"
+                  aria-label="Email"
+                >
+                  <img
+                    src="assets/gmail.svg"
+                    alt="Gmail"
+                    class="gmail-logo"
+                  >
+                </a>
+
                 <a 
                   href="https://github.com/rojarida"
                   target="_blank"
@@ -112,6 +126,34 @@
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
 
+                <a
+                  href="https://letterboxd.com/RomanJay/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Letterboxd"
+                  class="letterboxd-link"
+                >
+                  <img
+                    src="assets/letterboxd.svg"
+                    alt="Letterboxd"
+                    class="letterboxd-logo"
+                  >
+                </a>
+
+                <a
+                  href="https://open.spotify.com/user/romanjaydavid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Spotify"
+                  class="spotify-link"
+                >
+                  <img
+                    src="assets/spotify.svg"
+                    alt="Spotify"
+                    class="spotify-logo"
+                  >
+                </a>
+
                 <div class="discord-wrapper">
                   <button
                     type="button"
@@ -123,8 +165,8 @@
                   </button>
 
                   <span class="discord-tooltip"></span>
-
                 </div>
+
               </div>
             </div>
           </div>
@@ -132,7 +174,7 @@
           <div class="intro-image">
             <img
               src="images/profile.jpg"
-              alt="Portrait of myself"
+              alt="Photo of Roman Jay"
               class="profile-image"
             />
           </div>
@@ -140,202 +182,384 @@
       </section>
 
       <section class="about-section" id="about">
-        <div class="page-width">
+        <div class="page-width wide">
           <div class="section-heading">
             <h2 class="section-title">About Me</h2>
             <p class="section-description">
               A short overview of my background, interests, and goals in IT.
             </p>
           </div>
+
+          <div class="about-grid">
+            <article class="about-card overview-card">
+              <div class="about-icon overview-icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h3 class="about-title">Overview</h3>
+              <p class="about-text">
+                Computer Science student who enjoys learning about technology
+                by building, troubleshooting, and exploring how systems and
+                networks work.
+              </p>
+            </article>
+
+            <article class="about-card location-card">
+              <div class="about-icon location-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3 class="about-title">Location</h3>
+              <p class="about-text">
+                Based in Virginia Beach, Virginia. Willing to
+                relocate for career opportunities and new experiences.
+              </p>
+            </article>
+
+            <article class="about-card goals-card">
+              <div class="about-icon goals-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="about-title">Goals</h3>
+              <p class="about-text">
+                Working toward a career in IT by building real-world experience
+                in networking, homelabs, and practical technical problem solving.
+              </p>
+            </article>
+
+            <article class="about-card hobbies-card">
+              <div class="about-icon hobbies-icon">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <h3 class="about-title">Hobbies</h3>
+              <p class="about-text">
+                In my free time, I enjoy playing games like Street Fighter 6,
+                watching movies, lifting weights, and keeping up with new
+                technology.
+              </p>
+            </article>
+
+          </div>
         </div>
+      </section>
 
-        <div class="about-grid">
-          <article class="about-card overview-card">
-            <div class="about-icon overview-icon">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <h3 class="about-title">Overview</h3>
-            <p class="about-text">
-              Computer Science student who enjoys learning about technology
-              by building, troubleshooting, and exploring how systems and
-              networks work.
+      <section class="skills-section" id="skills">
+        <div class="page-width wide">
+          <div class="section-heading">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-description">
+              Technical skills I've developed through labs, 
+              personal projects, and continuous learning.
             </p>
-          </article>
+          </div>
 
-          <article class="about-card location-card">
-            <div class="about-icon location-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <h3 class="about-title">Location</h3>
-            <p class="about-text">
-              Based in Virginia Beach, Virginia. Willing to
-              relocate for career opportunities and new experiences.
-            </p>
-          </article>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-solid fa-network-wired"></i>
+                  Networking
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
 
-          <article class="about-card goals-card">
-            <div class="about-icon goals-icon">
-              <i class="fa-solid fa-bullseye"></i>
-            </div>
-            <h3 class="about-title">Goals</h3>
-            <p class="about-text">
-              Working toward a career in IT by building real-world experience
-              in networking, homelabs, and practical technical problem solving.
-            </p>
-          </article>
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">TCP/IP</span>
+                  <span class="skill-badge">Subnetting</span>
+                  <span class="skill-badge">Routing</span>
+                  <span class="skill-badge">Switching</span>
+                  <span class="skill-badge">DNS</span>
+                  <span class="skill-badge">DHCP</span>
+                  <span class="skill-badge">VLANs</span>
+                  <span class="skill-badge">VPNs</span>
+                  <span class="skill-badge">Wi-Fi</span>
+                  <span class="skill-badge">Troubleshooting</span>
+                </div>
+              </div>
+            </article>
 
-          <article class="about-card hobbies-card">
-            <div class="about-icon hobbies-icon">
-              <i class="fa-solid fa-gamepad"></i>
-            </div>
-            <h3 class="about-title">Hobbies</h3>
-            <p class="about-text">
-              In my free time, I enjoy playing games like Street Fighter 6,
-              watching movies, lifting weights, and keeping up with new
-              technology.
-            </p>
-          </article>
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-brands fa-windows"></i>
+                  Windows Administration
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">Windows Server</span>
+                  <span class="skill-badge">Active Directory</span>
+                  <span class="skill-badge">Password Resets</span>
+                  <span class="skill-badge">User & Group Management</span>
+                  <span class="skill-badge">Group Policy</span>
+                  <span class="skill-badge">Account Provisioning</span>
+                  <span class="skill-badge">File Shares</span>
+                  <span class="skill-badge">Remote Administration</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-brands fa-linux"></i>
+                  Linux 
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">Command Line</span>
+                  <span class="skill-badge">File Management</span>
+                  <span class="skill-badge">System Troubleshooting</span>
+                  <span class="skill-badge">Networking Tools</span>
+                  <span class="skill-badge">Log Analysis</span>
+                  <span class="skill-badge">SSH</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  Troubleshooting 
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">Incident Triage</span>
+                  <span class="skill-badge">Network Connectivity</span>
+                  <span class="skill-badge">Service Failures</span>
+                  <span class="skill-badge">Root Cause Analysis</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-solid fa-server"></i>
+                  Virtualization & Homelab 
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">Hyper-V</span>
+                  <span class="skill-badge">Oracle VirtualBox</span>
+                  <span class="skill-badge">QEMU/KVM</span>
+                  <span class="skill-badge">virt-manager</span>
+                  <span class="skill-badge">pfSense VM</span>
+                  <span class="skill-badge">Ubuntu Server</span>
+                  <span class="skill-badge">Windows Server</span>
+                  <span class="skill-badge">Virtual Networking</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <button
+                class="skill-card-toggle"
+                type="button"
+                aria-expanded="false">
+                <span class="skill-card-heading">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  Security Fundamentals 
+                </span>
+                <span class="skill-card-arrow">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+
+              <div class="skill-card-content">
+                <div class="skill-badges">
+                  <span class="skill-badge">Firewall Rules</span>
+                  <span class="skill-badge">VPN Access</span>
+                  <span class="skill-badge">Least Privilege</span>
+                  <span class="skill-badge">Access Control</span>
+                  <span class="skill-badge">Network Segmentation</span>
+                  <span class="skill-badge">Secure Remote Access</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
       <section class="certifications-section" id="certifications">
-        <div class="page-width">
+        <div class="page-width wide">
           <div class="section-heading">
             <h2 class="section-title">Certifications</h2>
             <p class="section-description">
-              Certifications I've earned in IT, networking, and security.
+              List of active IT certifications that I've earned.
             </p>
           </div>
+
+          <div class="certifications-grid">
+            <article class="certification-card">
+              <img
+                src="images/cisco-ccna.png"
+                alt="Cisco CCNA certification logo"
+                class="cisco-certification-logo"
+              />
+
+              <h3 class="certification-title">CCNA</h3>
+              <p class="certification-meta">
+                <strong>Issuer: </strong>Cisco
+              </p>
+              <p class="certification-meta">
+                <strong>Earned: </strong>October 29, 2025
+              </p>
+              <p class="certification-meta">
+                <strong>Expires: </strong>October 29, 2028
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/32c7727a-ca27-4c80-a009-da9c318418a4/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-button"
+              >
+                Verify on Credly
+              </a>
+            </article>
+
+            <article class="certification-card">
+              <img
+                src="images/comptia-security-logo.png"
+                alt="CompTIA Security+ certification logo"
+                class="comptia-certification-logo"
+              />
+
+              <h3 class="certification-title">Security+</h3>
+              <p class="certification-meta">
+                <strong>Issuer: </strong>CompTIA
+              </p>
+              <p class="certification-meta">
+                <strong>Earned: </strong>August 14, 2025
+              </p>
+              <p class="certification-meta">
+                <strong>Expires: </strong>August 14, 2028
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/fda4d890-6cac-44f4-9530-69ba8ce94f76/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-button"
+              >
+                Verify on Credly
+              </a>
+            </article>
+
+            <article class="certification-card">
+              <img
+                src="images/comptia-network-logo.png"
+                alt="CompTIA Network+ certification logo"
+                class="comptia-certification-logo"
+              />
+
+              <h3 class="certification-title">Network+</h3>
+              <p class="certification-meta">
+                <strong>Issuer: </strong>CompTIA
+              </p>
+              <p class="certification-meta">
+                <strong>Earned: </strong>July 14, 2025
+              </p>
+              <p class="certification-meta">
+                <strong>Expires: </strong>August 14, 2028
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/c6448ced-9611-4164-8868-8915dc273a21/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-button"
+              >
+                Verify on Credly
+              </a>
+            </article>
+   
+            <article class="certification-card">
+              <img
+                src="images/comptia-a-logo.png"
+                alt="CompTIA A+ certification logo"
+                class="comptia-certification-logo"
+              />
+
+              <h3 class="certification-title">A+</h3>
+              <p class="certification-meta">
+                <strong>Issuer: </strong>CompTIA
+              </p>
+              <p class="certification-meta">
+                <strong>Earned: </strong>November 27, 2024
+              </p>
+              <p class="certification-meta">
+                <strong>Expires: </strong>August 14, 2028
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/50ccc4e4-c5e5-4a6d-a723-f03832a75016/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-button"
+              >
+                Verify on Credly
+              </a>
+            </article>
+          </div> 
         </div>
-
-        <div class="certifications-grid">
-          <article class="certification-card">
-            <img
-              src="images/cisco-ccna.png"
-              alt="Cisco CCNA certification logo"
-              class="cisco-certification-logo"
-            />
-
-            <h3 class="certification-title">CCNA</h3>
-            <p class="certification-meta">
-              <strong>Issuer: </strong>Cisco
-            </p>
-            <p class="certification-meta">
-              <strong>Earned: </strong>October 29, 2025
-            </p>
-            <p class="certification-meta">
-              <strong>Expires: </strong>October 29, 2028
-            </p>
-
-            <a
-              href="https://www.credly.com/badges/32c7727a-ca27-4c80-a009-da9c318418a4/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="certification-button"
-            >
-              Verify on Credly
-            </a>
-          </article>
-
-          <article class="certification-card">
-            <img
-              src="images/comptia-security-logo.png"
-              alt="CompTIA Security+ certification logo"
-              class="comptia-certification-logo"
-            />
-
-            <h3 class="certification-title">Security+</h3>
-            <p class="certification-meta">
-              <strong>Issuer: </strong>CompTIA
-            </p>
-            <p class="certification-meta">
-              <strong>Earned: </strong>August 14, 2025
-            </p>
-            <p class="certification-meta">
-              <strong>Expires: </strong>August 14, 2028
-            </p>
-
-            <a
-              href="https://www.credly.com/badges/fda4d890-6cac-44f4-9530-69ba8ce94f76/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="certification-button"
-            >
-              Verify on Credly
-            </a>
-          </article>
-
-          <article class="certification-card">
-            <img
-              src="images/comptia-network-logo.png"
-              alt="CompTIA Network+ certification logo"
-              class="comptia-certification-logo"
-            />
-
-            <h3 class="certification-title">Network+</h3>
-            <p class="certification-meta">
-              <strong>Issuer: </strong>CompTIA
-            </p>
-            <p class="certification-meta">
-              <strong>Earned: </strong>July 14, 2025
-            </p>
-            <p class="certification-meta">
-              <strong>Expires: </strong>August 14, 2028
-            </p>
-
-            <a
-              href="https://www.credly.com/badges/c6448ced-9611-4164-8868-8915dc273a21/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="certification-button"
-            >
-              Verify on Credly
-            </a>
-          </article>
- 
-          <article class="certification-card">
-            <img
-              src="images/comptia-a-logo.png"
-              alt="CompTIA A+ certification logo"
-              class="comptia-certification-logo"
-            />
-
-            <h3 class="certification-title">A+</h3>
-            <p class="certification-meta">
-              <strong>Issuer: </strong>CompTIA
-            </p>
-            <p class="certification-meta">
-              <strong>Earned: </strong>November 27, 2024
-            </p>
-            <p class="certification-meta">
-              <strong>Expires: </strong>August 14, 2028
-            </p>
-
-            <a
-              href="https://www.credly.com/badges/50ccc4e4-c5e5-4a6d-a723-f03832a75016/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="certification-button"
-            >
-              Verify on Credly
-            </a>
-          </article>
-        </div> 
       </section>
 
-      <section class="placeholder-section" id="projects">
+      <section class="projects-section" id="projects">
         <div class="page-width">
-          <h2>Projects</h2>
+          <div class="section-heading">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-description">
+              Eventually will add projects here.
+            </p>
+
+          </div>
         </div>
       </section>
-
-      <section class="placeholder-section" id="contact">
-        <div class="page-width">
-          <h2>Contact</h2>
-        </div>
-      </section>
-
     </main>
     <script type="module" src="js/main.js"></script>
+    <footer class="site-footer">
+      <div class="page-width">
+        <p>
+          &copy; 2026 Roman Jay David
+        </p>
   </body>
 </html>
