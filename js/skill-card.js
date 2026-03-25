@@ -77,7 +77,7 @@ export function initSkillCards() {
   });
 
   window.addEventListener("resize", () => {
-    const openCardElement = document.querySelector(".skill-card.open");
+    const openCards = document.querySelectorAll(".skill-card.open");
 
     openCards.forEach((openCardElement) => {
       const content = openCardElement.querySelector(".skill-card-content");
