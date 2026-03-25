@@ -3,9 +3,21 @@ export function initSkillCards() {
 
   if (!skillCards.length) return;
 
-  function scrollToCard(skillCard) {
+  function getHeaderOffset() {
     const header = document.querySelector(".site-header");
-    const headerOffset = header ? header.offsetHeight : 0;
+    return header ? header.offsetHeight : 0;
+  }
+
+  function isCardTopVisible(skillCard) {
+    const rect = skillCard.getBoundingClientRect();
+    const headerOffset = getHeaderOffset();
+    const visibleTop = headerOffset + 16;
+
+    return rect.top >= visibleTop;
+  }
+
+  function scrollToCard(skillCard) {
+    const headerOffset = getHeaderOffset();
     const cardTop = skillCard.getBoundingClientRect().top + window.scrollY;
     const topPosition = cardTop - headerOffset - 16;
 
@@ -21,11 +33,13 @@ export function initSkillCards() {
     const toggleButton = skillCard.querySelector(".skill-card-toggle");
     const content = skillCard.querySelector(".skill-card-content");
 
+    const shouldScrollBack = scrollBack && !isCardTopVisible(skillCard);
+
     skillCard.classList.remove("open");
     toggleButton.setAttribute("aria-expanded", "false");
     content.style.maxHeight = null;
 
-    if (scrollBack) {
+    if (shouldScrollBack) {
       requestAnimationFrame(() => {
         scrollToCard(skillCard);
       });
