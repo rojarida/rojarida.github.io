@@ -28,15 +28,6 @@
   justify-content: center;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #555555;
-}
-
-.nav-links a:hover {
-  color: #222222;
-}
-
 .nav-link {
   color: #222222;
   text-decoration: none;
@@ -166,7 +157,7 @@
   }
 
   .nav-links {
-    padding: 1rem;
+    padding: 0;
   }
 
 }
