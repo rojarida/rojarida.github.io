@@ -29,7 +29,7 @@
           href="#intro"
           aria-label="Go to intro"
         >
-          <img src="/assets/favicon.ico" alt="rJ logo" />
+          <img src="assets/favicon.ico" alt="rJ logo" />
         </a>
 
         <button
@@ -558,13 +558,123 @@
       </section>
 
       <section class="projects-section" id="projects">
-        <div class="page-width">
+        <div class="page-width wide">
           <div class="section-heading">
             <h2 class="section-title">Projects</h2>
             <p class="section-description">
-              Eventually will add projects here.
+              Hands-on personal projects that focused on IT infrastructure,
+              networking, troubleshooting, and documentation.
             </p>
+          </div>
 
+          <div class="featured-projects-list">
+            <article class="featured-project-card">
+              <div class="featured-project-preview">
+                <img
+                  src="images/network-monitor.png"
+                  alt="Screenshot of the Network Monitor desktop application"
+                />
+              </div>
+
+              <div class="featured-project-content">
+                <p class="featured-project-label">Desktop Application</p>
+                <h3 class="featured-project-title">Network Monitor</h3>
+                <p class="featured-project-description">
+                  PySide6 desktop application for monitoring reachability,
+                  latency, and connection status with configurable targets,
+                  themed UI, and persistent settings.
+                </p>
+
+                <div class="featured-project-tags">
+                  <span>Python</span>
+                  <span>PySide6</span>
+                  <span>QSS</span>
+                  <span>Networking</span>
+                  <span>Threading</span>
+                </div>
+
+                <div class="featured-project-actions">
+                  <a
+                    href="https://github.com/rojarida/network-monitor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                  >
+                    <i class="fa-brands fa-github"></i> 
+                    <span>View on GitHub</span>
+                  </a>
+
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-project-card">
+              <div class="featured-project-preview">
+                <img
+                  src="images/homelab-topology.png"
+                  alt="Screenshot of my homelab topology"
+                />
+              </div>
+
+              <div class="featured-project-content">
+                <p class="featured-project-label">Homelab Infrastructure</p>
+                <h3 class="featured-project-title">
+                  Dell OptiPlex 7050 SFF
+                </h3>
+                <p class="featured-project-description">
+                  Ongoing homelab environment intended for hands-on practice
+                  with virtualization, networking, system administration, and
+                  many enterprise-style lab services.
+                </p>
+
+                <div class="featured-project-tags">
+                  <span>Ubuntu Server</span>
+                  <span>pfSense</span>
+                  <span>QEMU/KVM</span>
+                  <span>Networking</span>
+                  <span>Virtualization</span>
+                  <span>NAS</span>
+                  <span>Remote Administration</span>
+                </div>
+
+                <div class="featured-project-actions">
+                  <a
+                    href="https://github.com/rojarida/homelab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                    <span>View on GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-subsection-heading">
+            <h3 class="projects-subsection-title">Lab Builds</h3>
+            <p class="projects-subsection-description">
+              Smaller projects, technical builds, and
+              documentation completed in my homelab.
+            </p>
+          </div>
+
+          <div class="lab-projects-grid">
+            <article class="lab-project-card">
+              <p class="lab-project-label">Virtualization</p>
+              <h4 class="lab-project-title">Windows 11 VM Deployment</h4>
+              <p class="lab-project-description">
+                Windows 11 virtual machine setup used for isolated testing,
+                documentation, and client-side lab scenarios.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Windows 11</span>
+                <span>QEMU/KVM</span>
+                <span>Testing</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -575,5 +685,7 @@
         <p>
           &copy; 2026 Roman Jay David
         </p>
+      </div>
+    </footer>
   </body>
 </html>
