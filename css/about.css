@@ -17,6 +17,17 @@
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
   box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast), 
+    border-color var(--transition-fast); 
+}
+
+.about-card:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(150, 150, 150, 1);
 }
 
 .about-icon {
