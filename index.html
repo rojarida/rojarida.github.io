@@ -24,6 +24,14 @@
   <body>
     <header class="site-header">
       <nav class="site-nav">
+        <a
+          class="site-brand"
+          href="#intro"
+          aria-label="Go to intro"
+        >
+          <img src="assets/favicon.ico" alt="rJ logo" />
+        </a>
+
         <button
           class="menu-toggle"
           type="button"
@@ -36,9 +44,9 @@
 
         <ul class="nav-links" id="site-menu">
           <li>
-            <a href="#home" class="nav-link">
-              <i class="fa-solid fa-house"></i>
-              <span>Home</span>
+            <a href="#intro" class="nav-link">
+              <i class="fa-solid fa-star"></i>
+              <span>Intro</span>
             </a>
           </li>
 
@@ -70,12 +78,18 @@
             </a>
           </li>
 
+          <li>
+            <a href="beyond.html" class="nav-link">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Beyond</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <section class="intro-section" id="home">
+      <section class="intro-section" id="intro">
         <div class="page-width intro-layout">
           <div class="intro-text">
             <h1 class="intro-heading">
@@ -225,16 +239,31 @@
               </p>
             </article>
 
-            <article class="about-card hobbies-card">
-              <div class="about-icon hobbies-icon">
-                <i class="fa-solid fa-gamepad"></i>
+            <article
+              class="about-card hobbies-card easter-egg-card"
+              id="hobbies-card"
+            >
+             <div class="about-card-inner">
+                <div class="about-card-face about-card-front">
+                  <div class="about-icon hobbies-icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                  </div>
+                  <h3 class="about-title">Hobbies</h3>
+                  <p class="about-text">
+                    In my free time, I enjoy playing games like Street Fighter 6,
+                    watching movies, lifting weights, and keeping up with new
+                    technology.
+                  </p>
+                </div>
+
+                <div class="about-card-face about-card-back" aria-hidden="true">
+                  <img
+                    src="images/sf6-jp.png"
+                    alt="Street Fighter 6 JP Outfit 2 artwork"
+                    class="hobbies-easter-egg-image"
+                  />
+                </div>
               </div>
-              <h3 class="about-title">Hobbies</h3>
-              <p class="about-text">
-                In my free time, I enjoy playing games like Street Fighter 6,
-                watching movies, lifting weights, and keeping up with new
-                technology.
-              </p>
             </article>
 
           </div>
@@ -544,13 +573,238 @@
       </section>
 
       <section class="projects-section" id="projects">
-        <div class="page-width">
+        <div class="page-width wide">
           <div class="section-heading">
             <h2 class="section-title">Projects</h2>
             <p class="section-description">
-              Eventually will add projects here.
+              Hands-on personal projects focused on IT infrastructure,
+              networking, troubleshooting, and documentation.
             </p>
+          </div>
 
+          <div class="featured-projects-list">
+            <article class="featured-project-card">
+              <div class="featured-project-preview">
+                <img
+                  src="images/network-monitor.png"
+                  alt="Screenshot of the Network Monitor desktop application"
+                />
+              </div>
+
+              <div class="featured-project-content">
+                <h3 class="featured-project-title">Network Monitor</h3>
+                <p class="featured-project-description">
+                  PySide6 desktop application for monitoring reachability,
+                  latency, and connection status with configurable targets,
+                  themed UI, and persistent settings.
+                </p>
+
+                <div class="featured-project-tags">
+                  <span>Python</span>
+                  <span>PySide6</span>
+                  <span>QSS</span>
+                  <span>Networking</span>
+                  <span>Threading</span>
+                </div>
+
+                <div class="featured-project-actions">
+                  <a
+                    href="https://github.com/rojarida/network-monitor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                  >
+                    <i class="fa-brands fa-github"></i> 
+                    <span>View on GitHub</span>
+                  </a>
+
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-project-card">
+              <div class="featured-project-preview">
+                <img
+                  src="images/homelab-topology.png"
+                  alt="Network topology diagram of my homelab environment"
+                />
+              </div>
+
+              <div class="featured-project-content">
+                <h3 class="featured-project-title">
+                  Home Server and Virtualization Lab 
+                </h3>
+                <p class="featured-project-description">
+                  Ongoing homelab environment intended for hands-on practice
+                  with virtualization, networking, system administration, and
+                  many enterprise-style lab services.
+                </p>
+
+                <div class="featured-project-tags">
+                  <span>Ubuntu Server</span>
+                  <span>pfSense</span>
+                  <span>QEMU/KVM</span>
+                  <span>Networking</span>
+                  <span>Virtualization</span>
+                  <span>NAS</span>
+                  <span>Remote Administration</span>
+                </div>
+
+                <div class="featured-project-actions">
+                  <a
+                    href="https://github.com/rojarida/homelab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                    <span>View on GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-subsection-heading">
+            <h3 class="projects-subsection-title">
+              Lab Builds and Documentation
+            </h3>
+            <p class="projects-subsection-description">
+              Smaller projects, technical builds, and
+              documentation completed in my homelab.
+            </p>
+          </div>
+
+          <div class="lab-projects-grid">
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/tree/main/projects/enterprise-simulation/active-directory#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View steps to configure Active Directory on Windows Server 2025"
+            >
+              <h4 class="lab-project-title">Active Directory Setup</h4>
+              <p class="lab-project-description">
+                Configured Active Directory services on Windows Server 2025 VM
+                as part of an isolated entterprise lab environment.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Active Directory</span>
+                <span>Enterprise Lab</span>
+                <span>Domain Services</span>
+                <span>Windows Server</span>
+              </div>
+            </a>
+
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/tree/main/virtualization/windows-server-2025#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View clean Windows Server 2025 setup on GitHub"
+            >
+              <h4 class="lab-project-title">Windows Server 2025 VM Setup</h4>
+              <p class="lab-project-description">
+                A clean Windows Server 2025 virtual machine deployment used as
+                a foundation for server administration and enterprise lab
+                testing.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Windows Server 2025</span>
+                <span>QEMU/KVM</span>
+                <span>Virtualization</span>
+                <span>Lab Build</span>
+              </div>
+            </a>
+
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/tree/main/pfSense/setup#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View clean pfSense setup documentation on GitHub"
+            >
+              <h4 class="lab-project-title">pfSense Setup</h4>
+              <p class="lab-project-description">
+                Deployed pfSense in a virtual machine and configured it as a
+                practical firewall and router lab that mirrors a real-world
+                network setup.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>pfSense</span>
+                <span>Networking</span>
+                <span>Routing</span>
+                <span>Firewall</span>
+                <span>DHCP</span>
+              </div>
+            </a>
+ 
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/blob/main/projects/enterprise-simulation/active-directory/tasks/create-group-policy.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View creating Group Policy in Active Directory"
+            >
+              <h4 class="lab-project-title">Group Policy in Active Directory</h4>
+              <p class="lab-project-description">
+                Created and applied Group Policy Objects in an Active Directory
+                lab, linked them to Organizational Units, and verified policy
+                behavior on a domain-joined Windows client.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Group Policy</span>
+                <span>Active Directory</span>
+                <span>Windows Server</span>
+                <span>Organizational Units</span>
+              </div>
+            </a>
+
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/tree/main/virtualization/ubuntu#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View clean Ubuntu VM installation on GitHub"
+            >
+              <h4 class="lab-project-title">Ubuntu VM Deployment</h4>
+              <p class="lab-project-description">
+                Deployed an Ubuntu virtual machine for isolated Linux testing,
+                documentation, and client-side homelab scenarios.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Linux</span>
+                <span>Ubuntu</span>
+                <span>QEMU/KVM</span>
+                <span>Virtualization</span>
+              </div>
+            </a>
+
+            <a
+              class="lab-project-card"
+              href="https://github.com/rojarida/homelab/tree/main/virtualization/windows-11#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Windows 11 VM Deployment documentation on GitHub"
+            >
+              <h4 class="lab-project-title">Windows 11 VM Deployment</h4>
+              <p class="lab-project-description">
+                Deployed a Windows 11 virtual machine for domain testing,
+                documentation, and client-side homelab scenarios.
+              </p>
+
+              <div class="lab-project-tags">
+                <span>Windows 11</span>
+                <span>Client Testing</span>
+                <span>Domain Join</span>
+                <span>Virtualization</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -561,5 +815,7 @@
         <p>
           &copy; 2026 Roman Jay David
         </p>
+      </div>
+    </footer>
   </body>
 </html>
