@@ -37,19 +37,38 @@
 
 .skill-badge {
   flex: 0 1 calc((100% - 1rem) / 2);
-  cursor: default;
 }
 
 .featured-project-tags span {
   cursor: default;
 }
 
-@media (max-width: 1199px) {
-  .card-row {
+@media (width < 1800px) {
+  .card-row--four {
+    --columns: 3;
+  }
+}
+
+@media (max-width: 1600px) {
+  .card-row--three {
     --columns: 2;
   }
+}
 
-  .card-row--featured {
+@media (width < 1450px) {
+  .card-row--four {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-row--three {
+    --columns: 1;
+  }
+}
+
+@media (width < 1000px) {
+  .card-row--four {
     --columns: 1;
   }
 }

@@ -54,13 +54,16 @@
   transition: transform 0.25s ease;
 }
 
-.skill-card[open] .skill-card-arrow {
+.skill-card[open]:not(.is-closing) .skill-card-arrow {
   transform: rotate(45deg);
 }
 
 .skill-card-content {
   overflow: hidden;
-  cursor: default;
+}
+
+.skill-card-enhanced[open] {
+  cursor: pointer;
 }
 
 .skill-badges {
@@ -85,7 +88,7 @@
   line-height: 1.2;
   white-space: normal;
   overflow-wrap: anywhere;
-  cursor: pointer;
+  cursor: inherit;
   transition:
     transform var(--transition-fast),
     border-color var(--transition-fast),
