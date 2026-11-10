@@ -22,11 +22,11 @@
   color: var(--color-accent);
 }
 
-.intro-subheading {
+.intro-tagline {
   margin: 0 0 1rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--intro-subheading);
+  color: var(--intro-tagline);
 }
 
 .intro-description {
@@ -48,4 +48,100 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.social-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.social-links {
+  --social-icon-box: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-links a,
+.social-links button {
+  width: var(--social-icon-box);
+  height: var(--social-icon-box);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.5s ease,
+    opacity 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links button:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+.social-links a i,
+.social-links button i {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.social-links a img,
+.social-links button img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  object-fit: contain;
+}
+
+.github-link {
+  color: #2B3137;
+}
+
+.linkedin-link {
+  color: #0A66C2;
+}
+
+.discord-link {
+  color: #5865F2;
+}
+
+.discord-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord-tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background-color: #111111;
+  color: #FFFFFF;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.discord-tooltip.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }

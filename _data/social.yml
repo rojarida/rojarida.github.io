@@ -1,0 +1,25 @@
+---
+- label: Email
+  url: mailto:romanjaydavid@gmail.com
+  style: ''
+  image: "/assets/icons/gmail.svg"
+
+- label: GitHub
+  url: https://github.com/rojarida
+  style: github-link
+  icon: fa-brands fa-github
+
+- label: LinkedIn
+  url: https://www.linkedin.com/in/roman-jay/
+  style: linkedin-link
+  icon: fa-brands fa-linkedin
+
+- label: Letterboxd
+  url: https://letterboxd.com/RomanJay/
+  style: letterboxd-link
+  image: "/assets/icons/letterboxd.svg"
+
+- label: Spotify
+  url: https://open.spotify.com/user/romanjaydavid
+  style: spotify-link
+  image: "/assets/icons/spotify.svg"

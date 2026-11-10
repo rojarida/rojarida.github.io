@@ -7,6 +7,31 @@
       </h1>
       <p class="intro-tagline">{{ profile.tagline | escape }}</p>
       <p class="intro-description">{{ profile.description | escape }}</p>
+      <div class="social-section">
+        <p class="social-label">Connect with me:</p>
+        <div class="social-links">
+          {% for social in site.data.social %}
+            <a href="{{ social.url }}"
+               aria-label="{{ social.label | escape }}"
+               class="{{ social.style }}"{% if social.url contains 'https://' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+              {% if social.image %}
+                <img src="{{ social.image | relative_url }}" alt="" width="40" height="40">
+              {% else %}
+                <i class="{{ social.icon }}" aria-hidden="true"></i>
+              {% endif %}
+            </a>
+          {% endfor %}
+          <div class="discord-wrapper">
+            <button type="button"
+                    class="discord-button discord-link"
+                    aria-label="Copy Discord username: {{ profile.discord | escape }}"
+                    data-discord="{{ profile.discord | escape }}">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            </button>
+            <span class="discord-tooltip" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="intro-image">
       <img src="{{ profile.image | relative_url }}" alt="{{ profile.image_alt | escape }}" class="profile-image" />
