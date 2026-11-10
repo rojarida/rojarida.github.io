@@ -107,15 +107,15 @@
 }
 
 .github-link {
-  color: #2B3137;
+  color: #2b3137;
 }
 
 .linkedin-link {
-  color: #0A66C2;
+  color: #0a66c2;
 }
 
 .discord-link {
-  color: #5865F2;
+  color: #5865f2;
 }
 
 .discord-wrapper {
@@ -131,17 +131,108 @@
   left: 50%;
   transform: translateX(-50%) translateY(6px);
   background-color: #111111;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0.35rem 0.6rem;
   border-radius: 8px;
   font-size: 1rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .discord-tooltip.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 1700px) {
+  .intro-section {
+    min-height: calc(100svh - var(--header-height));
+  }
+
+  .intro-layout {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    padding: 0rem 1rem;
+  }
+
+  .intro-heading {
+    font-size: clamp(2.5rem, 3.4vw, 3.5rem);
+  }
+
+  .intro-name {
+    display: block;
+  }
+
+  .intro-tagline {
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  }
+
+  .intro-image {
+    justify-content: flex-end;
+  }
+
+  .profile-image {
+    width: min(320px, 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    min-height: calc(100svh - var(--header-height));
+    padding: 0rem;
+  }
+
+  .intro-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .intro-image {
+    order: -1;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-image {
+    width: min(10rem, 60vw);
+  }
+
+  .intro-heading {
+    font-size: clamp(2.5rem, 9vw, 3rem);
+  }
+
+  .intro-name {
+    display: block;
+  }
+
+  .intro-tagline {
+    font-size: 1.4rem;
+  }
+
+  .intro-description {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto 3rem;
+    font-size: 1rem;
+  }
+
+  .social-label,
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 15rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 2rem 0;
+  }
 }

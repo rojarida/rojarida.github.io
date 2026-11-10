@@ -5,9 +5,10 @@
   <h3 class="about-title">{{ include.card.title | escape }}</h3>
   <div class="about-text">{{ include.card.description | markdownify }}</div>
   {% if include.card.url %}
-  <p class="about-link">
-    <a href="{% include link-url.html url=include.card.url %}">
-      {{ include.card.link_label | default: include.card.title | escape }}</a>
-  </p>
+    <p class="about-link">
+      <a href="{% include link-url.html url=include.card.url %}">
+        {{ include.card.link_label | default: include.card.title | escape }}
+      </a>
+    </p>
   {% endif %}
 </article>

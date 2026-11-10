@@ -19,3 +19,22 @@
   max-width: var(--card-max);
   overflow-wrap: anywhere;
 }
+
+@media (max-width: 1199px) {
+  .card-row {
+    --columns: 2;
+  }
+  .card-row--featured {
+    --columns: 1;
+  }
+}
+@media (max-width: 768px) {
+  .card-row {
+    --columns: 1;
+  }
+}
+@media (max-width: 400px) {
+  .skill-badge {
+    flex-basis: 100%;
+  }
+}
