@@ -1,0 +1,119 @@
+.certifications-section {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--color-section-bg);
+  padding: 2rem 0rem;
+}
+
+.certification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.certification-card:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(150, 150, 150, 1);
+}
+
+.certification-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  display: flex;
+  object-fit: contain;
+}
+
+.certification-title {
+  margin: 0 0 2rem;
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.5rem);
+  text-align: center;
+}
+
+.certification-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.certification-meta:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.certification-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 106, 0, 0.75);
+  color: #222222;
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-fast),
+    transform 0.15s ease,
+    box-shadow var(--transition-fast);
+}
+
+.certification-button:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 106, 0, 0.5);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.certification-button:active {
+  background-color: rgba(255, 106, 0, 1);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    min-height: auto;
+    padding: 4rem 0rem;
+  }
+
+  .certification-card {
+    width: 100%;
+    max-width: none;
+    padding: 2rem 0.5rem;
+  }
+
+  .certification-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .certification-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .certification-meta {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .certification-button {
+    width: 100%;
+    max-width: 230px;
+    font-size: 1.1rem;
+  }
+}

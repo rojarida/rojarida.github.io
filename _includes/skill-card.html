@@ -1,0 +1,12 @@
+<details class="skill-card">
+  <summary class="skill-card-toggle">
+    <span class="skill-card-heading">
+      <i class="{{ include.card.icon }}" aria-hidden="true"></i>
+      {{ include.card.name | escape }}
+    </span>
+    <span class="skill-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+  </summary>
+  <div class="skill-card-content">
+    {% include tags.html tags=include.card.skills class="skill-badges" item_class="skill-badge" %}
+  </div>
+</details>

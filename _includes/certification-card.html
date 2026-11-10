@@ -1,0 +1,33 @@
+<article class="certification-card">
+  <img
+    src="{{ include.card.badge_image | relative_url }}"
+    alt="{{ include.card.badge_alt | escape }}"
+    class="certification-logo"
+    width="150"
+    height="150"
+    loading="lazy"
+  />
+  <h3 class="certification-title">{{ include.card.name | escape }}</h3>
+  <p class="certification-meta"><strong>Issuer: </strong>{{ include.card.issuer | escape }}</p>
+  {% if include.card.earned %}
+  <p class="certification-meta">
+    <strong>Earned: </strong
+    ><time datetime="{{ include.card.earned }}">{{ include.card.earned | date: '%B %-d, %Y' }}</time>
+  </p>
+  {% endif %} {% if include.card.expires %}
+  <p class="certification-meta">
+    <strong>Expires: </strong
+    ><time datetime="{{ include.card.expires }}">{{ include.card.expires | date: '%B %-d, %Y' }}</time>
+  </p>
+  {% endif %} {% if include.card.verification_url %} {% assign verification_label = include.card.verification_label |
+  default: 'Verify certification' %}
+  <a
+    href="{{ include.card.verification_url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="certification-button"
+    aria-label="{{ verification_label | escape }}: {{ include.card.name | escape }}"
+    >{{ verification_label | escape }}</a
+  >
+  {% endif %}
+</article>

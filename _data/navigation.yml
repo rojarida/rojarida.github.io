@@ -6,3 +6,11 @@
 - title: About
   url: "#about"
   icon: fa-solid fa-user
+
+- title: Skills
+  url: "#skills"
+  icon: fa-solid fa-screwdriver-wrench
+
+- title: Certifications
+  url: "#certifications"
+  icon: fa-solid fa-certificate

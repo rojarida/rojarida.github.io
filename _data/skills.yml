@@ -1,0 +1,69 @@
+---
+title: Skills
+description: Technical skills I've developed through labs, personal projects, and continuous learning.
+categories:
+  - name: Networking
+    icon: fa-solid fa-network-wired
+    skills:
+      - TCP/IP
+      - Subnetting
+      - Routing
+      - Switching
+      - DNS
+      - DHCP
+      - VLANs
+      - VPNs
+      - Wi-Fi
+      - Troubleshooting
+
+  - name: Windows Administration
+    icon: fa-brands fa-windows
+    skills:
+      - Windows Server
+      - Active Directory
+      - Password Resets
+      - User & Group Management
+      - Group Policy
+      - Account Provisioning
+      - File Shares
+      - Remote Administration
+
+  - name: Linux
+    icon: fa-brands fa-linux
+    skills:
+      - Command Line
+      - File Management
+      - System Troubleshooting
+      - Networking Tools
+      - Log Analysis
+      - SSH
+
+  - name: Troubleshooting
+    icon: fa-solid fa-screwdriver-wrench
+    skills:
+      - Incident Triage
+      - Network Connectivity
+      - Service Failures
+      - Root Cause Analysis
+
+  - name: Virtualization & Homelab
+    icon: fa-solid fa-server
+    skills:
+      - Hyper-V
+      - Oracle VirtualBox
+      - QEMU/KVM
+      - virt-manager
+      - pfSense VM
+      - Ubuntu Server
+      - Windows Server
+      - Virtual Networking
+
+  - name: Security Fundamentals
+    icon: fa-solid fa-shield-halved
+    skills:
+      - Firewall Rules
+      - VPN Access
+      - Least Privilege
+      - Access Control
+      - Network Segmentation
+      - Secure Remote Access

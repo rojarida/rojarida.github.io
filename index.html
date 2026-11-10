@@ -14,3 +14,25 @@ home: true
     </div>
   </div>
 </section>
+
+<section class="skills-section" id="skills">
+  <div class="page-width wide">
+    {% include section-heading.html section=site.data.skills %}
+    <div class="skills-grid card-row card-row--three">
+      {% for card in site.data.skills.categories %}
+        {% include skill-card.html card=card %}
+      {% endfor %}
+    </div>
+  </div>
+</section>  
+
+<section class="certifications-section" id="certifications">
+  <div class="page-width wide">
+    {% include section-heading.html section=site.data.certifications %}
+    <div class="certifications-grid card-row card-row--four">
+      {% for card in site.data.certifications.items %}
+        {% include certification-card.html card=card %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -3,7 +3,7 @@
   --card-gap: 2rem;
   --card-max: 30rem;
   display: flex;
-  flex-wrap: wpra;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--card-gap);
 }
@@ -13,6 +13,11 @@
   --card-max: 26rem;
 }
 
+.card-row--featured {
+  --columns: 1;
+  --card-max: 100%;
+}
+
 .card-row > * {
   flex: 0 1 calc((100% - (var(--columns) - 1) * var(--card-gap)) / var(--columns));
   min-width: 0;
@@ -20,10 +25,30 @@
   overflow-wrap: anywhere;
 }
 
+.skills-grid {
+  align-items: flex-start;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-badge {
+  flex: 0 1 calc((100% - 1rem) / 2);
+  cursor: default;
+}
+
+.featured-project-tags span {
+  cursor: default;
+}
+
 @media (max-width: 1199px) {
   .card-row {
     --columns: 2;
   }
+
   .card-row--featured {
     --columns: 1;
   }
