@@ -3,21 +3,30 @@ title: About Me
 description: A short overview of my background, interests, and career goals.
 cards:
   - title: Overview
-    description: Testing
+    description: >-
+      I'm a senior Computer Science student at Old Dominion University, currently in my final year and completing my
+      capstone project. I have a strong foundation in IT infrastructure, computer networking and Linux system
+      administration.
     icon: fa-solid fa-user
     icon_color: "#002ead"
 
   - title: Location
-    description: Based in...
+    description: >-
+      Based in Virginia Beach, Virginia. I'm open to relocating for career opportunities, with a particular interest in
+      Northern California and the San Francisco Bay Area.
     icon: fa-solid fa-location-dot
     icon_color: "#00660c"
 
   - title: Goals
-    description: Working toward..
+    description: >-
+      My goal is to build a career in IT infrastructure, specializing in Linux systems or networking. I'm passionate
+      about hands-on troubleshooting, learning new technologies, and continuously improving my technical skills.
     icon: fa-solid fa-bullseye
     icon_color: "#ab8e00"
 
   - title: Hobbies
-    description: In my free time,
+    description: >-
+      In my free time, I enjoy playing video games like Street Fighter 6, watching movies, lifting weights, and
+      tinkering with computer systems. If I'm not doing that, I enjoy spending time with my cat, Peaches.
     icon: fa-solid fa-gamepad
     icon_color: "#ad3e3e"
