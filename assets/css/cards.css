@@ -39,10 +39,6 @@
   flex: 0 1 calc((100% - 1rem) / 2);
 }
 
-.featured-project-tags span {
-  cursor: default;
-}
-
 @media (width < 1800px) {
   .card-row--four {
     --columns: 3;
