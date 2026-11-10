@@ -1,69 +1,70 @@
 ---
 title: Skills
-description: Technical skills I've developed through labs, personal projects, and continuous learning.
+description: >-
+  Technical skills I've developed through curiosity, independent learning, and personal projects.
 categories:
+  - name: Linux & System Administration
+    icon: fa-solid fa-terminal
+    skills:
+      - RHEL / Ubuntu 
+      - Package Management
+      - Users, Groups & ACLs
+      - SELinux
+      - Filesystems
+      - Remote Administration
+      - System Troubleshooting
+      - systemd
+
   - name: Networking
     icon: fa-solid fa-network-wired
     skills:
       - TCP/IP
       - Subnetting
-      - Routing
-      - Switching
+      - Routing & Switching
       - DNS
       - DHCP
       - VLANs
+      - NAT
       - VPNs
-      - Wi-Fi
-      - Troubleshooting
+      - Firewall Configuration
+      - Network Troubleshooting
 
-  - name: Windows Administration
-    icon: fa-brands fa-windows
-    skills:
-      - Windows Server
-      - Active Directory
-      - Password Resets
-      - User & Group Management
-      - Group Policy
-      - Account Provisioning
-      - File Shares
-      - Remote Administration
-
-  - name: Linux
-    icon: fa-brands fa-linux
-    skills:
-      - Command Line
-      - File Management
-      - System Troubleshooting
-      - Networking Tools
-      - Log Analysis
-      - SSH
-
-  - name: Troubleshooting
-    icon: fa-solid fa-screwdriver-wrench
-    skills:
-      - Incident Triage
-      - Network Connectivity
-      - Service Failures
-      - Root Cause Analysis
-
-  - name: Virtualization & Homelab
+  - name: Virtualization & Containers
     icon: fa-solid fa-server
     skills:
-      - Hyper-V
-      - Oracle VirtualBox
-      - QEMU/KVM
-      - virt-manager
-      - pfSense VM
-      - Ubuntu Server
-      - Windows Server
+      - Proxmox VE
+      - VMware ESXi
+      - vSphere / vCenter
+      - KVM / QEMU
       - Virtual Networking
+      - Snapshots
 
-  - name: Security Fundamentals
-    icon: fa-solid fa-shield-halved
+  - name: Storage & Deployment
+    icon: fa-solid fa-database
     skills:
-      - Firewall Rules
-      - VPN Access
-      - Least Privilege
-      - Access Control
-      - Network Segmentation
-      - Secure Remote Access
+      - NAS / SAN
+      - RAID
+      - iSCSI
+      - NFS / SMB
+      - PXE Boot
+      - Disk Imaging & Recovery
+
+  - name: Programming & Development
+    icon: fa-solid fa-code
+    skills:
+      - Python
+      - C++
+      - Bash Scripting
+      - SQL
+      - PostgreSQL
+      - Git / GitHub
+
+  - name: Professional Tools & Platforms
+    icon: fa-solid fa-briefcase
+    skills:
+      - Salesforce
+      - Jira
+      - Confluence
+      - Glean
+      - Knowledge Base Systems
+      - Technical Documentation
