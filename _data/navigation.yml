@@ -1,0 +1,9 @@
+---
+- title: Intro
+  url: "#intro"
+  icon: fa-solid fa-star
+
+- title: About
+  url: "#about"
+  icon: fa-solid fa-user
+

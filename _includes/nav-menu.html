@@ -1,0 +1,26 @@
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="{{ '/' | relative_url }}#intro" aria-label="Go to homepage">
+      <img src="{{ '/assets/icons/favicon.ico' | relative_url }}" alt="rJ logo" width="32" height="32">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-menu">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <ul class="nav-links" id="site-menu">
+      {% for item in site.data.navigation %}
+        {% assign first_character = item.url | slice: 0 %}
+        {% if first_character == '#' %}
+          {% if page.home %}{% assign href = item.url %}{% else %}{% assign href = '/' | relative_url | append: item.url %}{% endif %}
+        {% else %}
+          {% assign href = item.url | relative_url %}
+        {% endif %}
+      <li>
+        <a href="{{ href }}" class="nav-link{% if page.url == item.url %} active{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+          <i class="{{ item.icon }}" aria-hidden="true"></i>
+          <span>{{ item.title | escape }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
