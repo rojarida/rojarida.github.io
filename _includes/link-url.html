@@ -1,0 +1,5 @@
+{% if include.url contains '://' or include.url contains 'mailto:' %}
+  {{ include.url }}
+{% else %}
+  {{ include.url | relative_url }}
+{% endif %}

@@ -3,3 +3,14 @@ layout: default
 home: true
 ---
 {% include intro.html %}
+
+<section class="about-section" id="about">
+  <div class="page-width wide">
+    {% include section-heading.html section=site.data.about %}
+    <div class="about grid card-row card-row--four">
+      {% for card in site.data.about.cards %}
+        {% include about-card.html card=card %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+.card-row {
+  --columns: 3;
+  --card-gap: 2rem;
+  --card-max: 30rem;
+  display: flex;
+  flex-wrap: wpra;
+  justify-content: center;
+  gap: var(--card-gap);
+}
+
+.card-row--four {
+  --columns: 4;
+  --card-max: 26rem;
+}
+
+.card-row > * {
+  flex: 0 1 calc((100% - (var(--columns) - 1) * var(--card-gap)) / var(--columns));
+  min-width: 0;
+  max-width: var(--card-max);
+  overflow-wrap: anywhere;
+}

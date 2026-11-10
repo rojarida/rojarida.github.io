@@ -1,0 +1,23 @@
+---
+title: About Me
+description: A short overview of my background, interests, and career goals.
+cards:
+  - title: Overview
+    description: Testing
+    icon: fa-solid fa-user
+    icon_color: "#002ead"
+
+  - title: Location
+    description: Based in...
+    icon: fa-solid fa-location-dot
+    icon_color: "#00660c"
+
+  - title: Goals
+    description: Working toward..
+    icon: fa-solid fa-bullseye
+    icon_color: "#ab8e00"
+
+  - title: Hobbies
+    description: In my free time,
+    icon: fa-solid fa-gamepad
+    icon_color: "#ad3e3e"

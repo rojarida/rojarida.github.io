@@ -1,0 +1,7 @@
+{% assign heading_tag = include.heading_tag | default: 'h2' %}
+<div class="section-heading">
+  <{{ heading_tag }} class="section-title">{{ include.section.title | escape }}</{{ heading_tag }}>
+  {% if include.section.description %}
+    <p class="section-description">{{ include.section.description | escape }}</p>
+  {% endif %}
+</div>
