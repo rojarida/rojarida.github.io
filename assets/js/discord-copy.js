@@ -13,6 +13,6 @@ export function initDiscordCopy() {
       tooltip.textContent = `Discord: ${button.dataset.discord}`;
     }
     tooltip.classList.add("show");
-    timer = setTimeout(() => tooltip.classList.remove("show"), 4000);
+    timer = setTimeout(() => tooltip.classList.remove("show"), 1500);
   });
 }
