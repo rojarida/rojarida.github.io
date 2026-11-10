@@ -1,6 +1,7 @@
 ---
 title: Certifications
 description: List of active IT certifications that I've earned.
+# Quote IDs and codes to preserve leading zeros and hyphens.
 items:
   - name: RHCSA
     issuer: Red Hat
@@ -9,7 +10,12 @@ items:
     badge_image: "/assets/logos/redhat-rhcsa.png"
     badge_alt: Red Hat RHCSA certification logo
     verification_url: https://www.credly.com/badges/222d1cc6-035a-415b-8c95-111435179982/public_url
-    verification_label: Verify on Credly
+    verification_label: View on Credly
+    credential_id: "260-130-505"
+    verification_code: ""
+    issuer_verification_url: "https://rhtapps.redhat.com/verify?certId=260-130-505"
+    issuer_verification_label: "Verify with Red Hat"
+    verification_instructions: ""
 
   - name: CCNA
     issuer: Cisco
@@ -18,7 +24,12 @@ items:
     badge_image: "/assets/logos/cisco-ccna.png"
     badge_alt: Cisco CCNA certification logo
     verification_url: https://www.credly.com/badges/32c7727a-ca27-4c80-a009-da9c318418a4/public_url
-    verification_label: Verify on Credly
+    verification_label: View on Credly
+    credential_id: ""
+    verification_code: "70cd571ab0ab4c30b8d0fcec6b5ee3e1"
+    issuer_verification_url: "https://cp.certmetrics.com/cisco/en/public/verify/credential/70cd571ab0ab4c30b8d0fcec6b5ee3e1"
+    issuer_verification_label: "Verify with Cisco"
+    verification_instructions: ""
 
   - name: Security+
     issuer: CompTIA
@@ -27,7 +38,12 @@ items:
     badge_image: "/assets/logos/comptia-security.png"
     badge_alt: CompTIA Security+ certification logo
     verification_url: https://www.credly.com/badges/fda4d890-6cac-44f4-9530-69ba8ce94f76/public_url
-    verification_label: Verify on Credly
+    verification_label: View on Credly
+    credential_id: ""
+    verification_code: "Z13FDE6Q4N41YG2J"
+    issuer_verification_url: "https://cp.certmetrics.com/comptia/en/public/verify/credential/Z13FDE6Q4N41YG2J"
+    issuer_verification_label: "Verify with CompTIA"
+    verification_instructions: ""
 
   - name: Network+
     issuer: CompTIA
@@ -36,7 +52,12 @@ items:
     badge_image: "/assets/logos/comptia-network.png"
     badge_alt: CompTIA Network+ certification logo
     verification_url: https://www.credly.com/badges/c6448ced-9611-4164-8868-8915dc273a21/public_url
-    verification_label: Verify on Credly
+    verification_label: View on Credly
+    credential_id: ""
+    verification_code: "DME83JSY0M4QCD32"
+    issuer_verification_url: "https://cp.certmetrics.com/comptia/en/public/verify/credential/DME83JSY0M4QCD32"
+    issuer_verification_label: "Verify with CompTIA"
+    verification_instructions: ""
 
   - name: A+
     issuer: CompTIA
@@ -45,4 +66,9 @@ items:
     badge_image: "/assets/logos/comptia-a.png"
     badge_alt: CompTIA A+ certification logo
     verification_url: https://www.credly.com/badges/50ccc4e4-c5e5-4a6d-a723-f03832a75016/public_url
-    verification_label: Verify on Credly
+    verification_label: View on Credly
+    credential_id: ""
+    verification_code: "MJLYMPRYQFF1QBW8"
+    issuer_verification_url: "https://cp.certmetrics.com/comptia/en/public/verify/credential/MJLYMPRYQFF1QBW8"
+    issuer_verification_label: "Verify with CompTIA"
+    verification_instructions: ""

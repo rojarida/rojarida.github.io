@@ -49,15 +49,41 @@
   text-align: center;
 }
 
-.certification-meta:last-of-type {
-  margin-bottom: 2rem;
+.certification-details {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.certification-details code {
+  font-size: 0.95em;
+  overflow-wrap: anywhere;
+  user-select: all;
+  cursor: text;
+}
+
+.certification-instructions {
+  margin: 0.75rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.certification-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 2rem;
 }
 
 .certification-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
+  max-width: 100%;
   padding: 0.85rem 1.5rem;
   border-radius: var(--radius-pill);
   background-color: rgba(255, 106, 0, 0.75);

@@ -1,33 +1,59 @@
 <article class="certification-card">
-  <img
-    src="{{ include.card.badge_image | relative_url }}"
-    alt="{{ include.card.badge_alt | escape }}"
-    class="certification-logo"
-    width="150"
-    height="150"
-    loading="lazy"
-  />
+  <img src="{{ include.card.badge_image | relative_url }}"
+       alt="{{ include.card.badge_alt | escape }}"
+       class="certification-logo"
+       width="150"
+       height="150"
+       loading="lazy" />
   <h3 class="certification-title">{{ include.card.name | escape }}</h3>
   <p class="certification-meta"><strong>Issuer: </strong>{{ include.card.issuer | escape }}</p>
   {% if include.card.earned %}
-  <p class="certification-meta">
-    <strong>Earned: </strong
-    ><time datetime="{{ include.card.earned }}">{{ include.card.earned | date: '%B %-d, %Y' }}</time>
-  </p>
-  {% endif %} {% if include.card.expires %}
-  <p class="certification-meta">
-    <strong>Expires: </strong
-    ><time datetime="{{ include.card.expires }}">{{ include.card.expires | date: '%B %-d, %Y' }}</time>
-  </p>
-  {% endif %} {% if include.card.verification_url %} {% assign verification_label = include.card.verification_label |
-  default: 'Verify certification' %}
-  <a
-    href="{{ include.card.verification_url }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="certification-button"
-    aria-label="{{ verification_label | escape }}: {{ include.card.name | escape }}"
-    >{{ verification_label | escape }}</a
-  >
+    <p class="certification-meta">
+      <strong>Earned: </strong><time datetime="{{ include.card.earned }}">{{ include.card.earned | date: '%B %-d, %Y' }}</time>
+    </p>
+  {% endif %}
+
+  {% if include.card.expires %}
+    <p class="certification-meta">
+      <strong>Expires: </strong><time datetime="{{ include.card.expires }}">{{ include.card.expires | date: '%B %-d, %Y' }}</time>
+    </p>
+  {% endif %}
+  {% assign credential_id = include.card.credential_id | default: '' | strip %}
+  {% assign verification_code = include.card.verification_code | default: '' | strip %}
+  {% assign verification_instructions = include.card.verification_instructions | default: '' | strip %}
+  {% if credential_id != empty or verification_code != empty or verification_instructions != empty %}
+    <div class="certification-details">
+      {% if credential_id != empty %}
+        <p class="certification-meta"><strong>Credential ID: </strong><code>{{ credential_id | escape }}</code></p>
+      {% endif %}
+      {% if verification_code != empty %}
+        <p class="certification-meta"><strong>Verification code: </strong><code>{{ verification_code | escape }}</code></p>
+      {% endif %}
+      {% if verification_instructions != empty %}
+        <p class="certification-instructions">{{ verification_instructions | escape }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% assign verification_url = include.card.verification_url | default: '' | strip %}
+  {% assign issuer_verification_url = include.card.issuer_verification_url | default: '' | strip %}
+  {% if verification_url != empty or issuer_verification_url != empty %}
+    <div class="certification-actions">
+      {% if verification_url != empty %}
+        {% assign verification_label = include.card.verification_label | default: 'Verify certification' %}
+        <a href="{{ verification_url | escape }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="certification-button"
+           aria-label="{{ verification_label | escape }}: {{ include.card.name | escape }}">{{ verification_label | escape }}</a>
+      {% endif %}
+      {% if issuer_verification_url != empty %}
+        {% assign issuer_verification_label = include.card.issuer_verification_label | default: 'Verify with issuer' %}
+        <a href="{{ issuer_verification_url | escape }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="certification-button"
+           aria-label="{{ issuer_verification_label | escape }}: {{ include.card.name | escape }}">{{ issuer_verification_label | escape }}</a>
+      {% endif %}
+    </div>
   {% endif %}
 </article>
