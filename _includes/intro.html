@@ -1,0 +1,15 @@
+{% assign profile = site.data.profile %}
+<section class="intro-section" id="intro">
+  <div class="page-width intro-layout">
+    <div class="intro-text">
+      <h1 class="intro-heading">
+        {{ profile.greeting | escape }} <span class="intro-name">{{ profile.name | escape }}</span>
+      </h1>
+      <p class="intro-tagline">{{ profile.tagline | escape }}</p>
+      <p class="intro-description">{{ profile.description | escape }}</p>
+    </div>
+    <div class="intro-image">
+      <img src="{{ profile.image | relative_url }}" alt="{{ profile.image_alt | escape }}" class="profile-image" />
+    </div>
+  </div>
+</section>

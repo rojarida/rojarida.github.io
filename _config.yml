@@ -1,0 +1,8 @@
+title: Roman Jay
+author: Roman Jay David
+url: "https://rojarida.github.io" 
+lang: en
+
+strict_front_matter: true
+liquid:
+  error_mode: strict
