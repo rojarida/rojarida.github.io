@@ -55,6 +55,7 @@
 }
 
 .certification-details code {
+  font-family: inherit;
   font-size: 0.95em;
   overflow-wrap: anywhere;
   user-select: all;
