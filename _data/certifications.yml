@@ -2,6 +2,15 @@
 title: Certifications
 description: List of active IT certifications that I've earned.
 items:
+  - name: RHCSA
+    issuer: Red Hat
+    earned: "2026-09-25"
+    expires: "2029-09-25"
+    badge_image: "/assets/logos/redhat-rhcsa.png"
+    badge_alt: Red Hat RHCSA certification logo
+    verification_url: https://www.credly.com/badges/222d1cc6-035a-415b-8c95-111435179982/public_url
+    verification_label: Verify on Credly
+
   - name: CCNA
     issuer: Cisco
     earned: "2025-10-29"
