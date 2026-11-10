@@ -2,6 +2,7 @@
 layout: default
 home: true
 ---
+
 {% include intro.html %}
 
 <section class="about-section" id="about">
@@ -24,7 +25,7 @@ home: true
       {% endfor %}
     </div>
   </div>
-</section>  
+</section>
 
 <section class="certifications-section" id="certifications">
   <div class="page-width wide">
@@ -32,6 +33,30 @@ home: true
     <div class="certifications-grid card-row card-row--four">
       {% for card in site.data.certifications.items %}
         {% include certification-card.html card=card %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <div class="page-width wide">
+    {% include section-heading.html section=site.data.projects %}
+    {% assign featured_writeups = site.writeups | where: 'featured', true | sort: 'order' %}
+    {% assign featured_projects = site.data.projects.featured | concat: featured_writeups %}
+    <div class="featured-projects-list card-row card-row--featured">
+      {% for project in featured_projects %}
+        {% include featured-project-card.html card=project %}
+      {% endfor %}
+    </div>
+    <div class="projects-subsection-heading">
+      <h3 class="projects-subsection-title">{{ site.data.projects.lab_title | escape }}</h3>
+      <p class="projects-subsection-description">{{ site.data.projects.lab_description | escape }}</p>
+    </div>
+    {% assign lab_writeups = site.writeups | where: 'featured', false | sort: 'order' %}
+    {% assign lab_projects = site.data.projects.labs | concat: lab_writeups %}
+    <div class="lab-projects-grid card-row card-row--three">
+      {% for project in lab_projects %}
+        {% include lab-card.html card=project %}
       {% endfor %}
     </div>
   </div>

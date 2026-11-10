@@ -14,3 +14,7 @@
 - title: Certifications
   url: "#certifications"
   icon: fa-solid fa-certificate
+
+- title: Projects
+  url: "#projects"
+  icon: fa-solid fa-folder-open

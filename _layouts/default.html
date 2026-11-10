@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}" />
     <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" type="image/x-icon" />
-    {% assign styles = 'base,header,intro,about,skills,certifications,cards' | split: ',' %}
+    {% assign styles = 'base,header,intro,about,skills,certifications,projects,cards' | split: ',' %}
     {% for style in styles %}
       <link rel="stylesheet" href="{{ '/assets/css/' | append: style | append: '.css' | relative_url }}" />
     {% endfor %}

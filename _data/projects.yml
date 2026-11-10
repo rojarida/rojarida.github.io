@@ -1,0 +1,108 @@
+---
+title: Projects
+description: Hands-on personal projects focused on IT infrastructure, networking, troubleshooting, and documentation.
+featured:
+  - title: Network Monitor
+    description:
+      PySide6 desktop application for monitoring reachability, latency, and connection status with configurable targets,
+      themed UI, and persistent settings.
+    image: "/assets/images/network-monitor.png"
+    image_alt: Screenshot of the Network Monitor desktop application
+    technologies:
+      - Python
+      - PySide6
+      - QSS
+      - Networking
+      - Threading
+    category: Software
+    github_url: https://github.com/rojarida/network-monitor
+
+  - title: Home Server and Virtualization Lab
+    description:
+      Ongoing homelab environment intended for hands-on practice with virtualization, networking, system administration,
+      and many enterprise-style lab services.
+    image: "/assets/images/homelab-topology.png"
+    image_alt: Network topology diagram of my homelab environment
+    technologies:
+      - Ubuntu Server
+      - pfSense
+      - QEMU/KVM
+      - Networking
+      - Virtualization
+      - NAS
+      - Remote Administration
+    category: Homelab
+    github_url: https://github.com/rojarida/homelab
+
+lab_title: Lab Builds and Documentation
+lab_description: Smaller projects, technical builds, and documentation completed in my homelab.
+labs:
+  - title: Active Directory Setup
+    description:
+      Configured Active Directory services on Windows Server 2025 VM as part of an isolated enterprise lab environment.
+    technologies:
+      - Active Directory
+      - Enterprise Lab
+      - Domain Services
+      - Windows Server
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/tree/main/projects/enterprise-simulation/active-directory#readme
+
+  - title: Windows Server 2025 VM Setup
+    description:
+      A clean Windows Server 2025 virtual machine deployment used as a foundation for server administration and
+      enterprise lab testing.
+    technologies:
+      - Windows Server 2025
+      - QEMU/KVM
+      - Virtualization
+      - Lab Build
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/windows-server-2025#readme
+
+  - title: pfSense Setup
+    description:
+      Deployed pfSense in a virtual machine and configured it as a practical firewall and router lab that mirrors a
+      real-world network setup.
+    technologies:
+      - pfSense
+      - Networking
+      - Routing
+      - Firewall
+      - DHCP
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/tree/main/pfSense/setup#readme
+
+  - title: Group Policy in Active Directory
+    description:
+      Created and applied Group Policy Objects in an Active Directory lab, linked them to Organizational Units, and
+      verified policy behavior on a domain-joined Windows client.
+    technologies:
+      - Group Policy
+      - Active Directory
+      - Windows Server
+      - Organizational Units
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/blob/main/projects/enterprise-simulation/active-directory/tasks/create-group-policy.md
+
+  - title: Ubuntu VM Deployment
+    description:
+      Deployed an Ubuntu virtual machine for isolated Linux testing, documentation, and client-side homelab scenarios.
+    technologies:
+      - Linux
+      - Ubuntu
+      - QEMU/KVM
+      - Virtualization
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/ubuntu#readme
+
+  - title: Windows 11 VM Deployment
+    description:
+      Deployed a Windows 11 virtual machine for domain testing, documentation, and client-side homelab scenarios.
+    technologies:
+      - Windows 11
+      - Client Testing
+      - Domain Join
+      - Virtualization
+    category: Homelab
+    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/windows-11#readme

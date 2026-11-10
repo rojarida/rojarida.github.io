@@ -1,0 +1,11 @@
+{% assign documentation_url = include.card.documentation_url | default: include.card.github_url %}
+{% if include.card.collection == "writeups" %}
+  {% assign documentation_url = include.card.url %}
+{% endif %}
+<a class="lab-project-card"
+   href="{% include link-url.html url=documentation_url %}"{% if documentation_url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}
+   aria-label="Read {{ include.card.title | escape }} documentation"{% if include.card.category %} data-category="{{ include.card.category | escape }}"{% endif %}>
+  <h4 class="lab-project-title">{{ include.card.title | escape }}</h4>
+  <p class="lab-project-description">{{ include.card.description | escape }}</p>
+  {% include tags.html tags=include.card.technologies class="lab-project-tags" %}
+</a>

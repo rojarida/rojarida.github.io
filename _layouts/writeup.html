@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<article class="page-width prose writeup">
+  <header>
+    <p><a href="{{ '/' | relative_url }}#projects">&larr; All projects</a></p>
+    {% include section-heading.html section=page heading_tag="h1" %}
+    {% include tags.html tags=page.technologies class="featured-project-tags" %}
+    {% if page.github_url %}<p><a href="{{ page.github_url }}">View {{ page.title | escape }} on GitHub</a></p>{% endif %}
+  </header>
+  {{ content }}
+</article>

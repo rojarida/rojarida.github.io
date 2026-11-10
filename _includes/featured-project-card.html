@@ -1,0 +1,34 @@
+<article class="featured-project-card"{% if include.card.category %} data-category="{{ include.card.category | escape }}"{% endif %}>
+  {% if include.card.image %}
+    <div class="featured-project-preview">
+      <img src="{{ include.card.image | relative_url }}"
+           alt="{{ include.card.image_alt | default: include.card.title | escape }}"
+           loading="lazy">
+    </div>
+  {% endif %}
+  <div class="featured-project-content">
+    <h3 class="featured-project-title">{{ include.card.title | escape }}</h3>
+    <p class="featured-project-description">{{ include.card.description | escape }}</p>
+    {% include tags.html tags=include.card.technologies class="featured-project-tags" %}
+    <div class="featured-project-actions">
+      {% if include.card.github_url %}
+        <a href="{{ include.card.github_url }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="project-button"
+           aria-label="View {{ include.card.title | escape }} on GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>View on GitHub</span>
+        </a>
+      {% endif %}
+      {% assign documentation_url = include.card.documentation_url %}
+      {% if include.card.collection == "writeups" %}
+        {% assign documentation_url = include.card.url %}
+      {% endif %}
+      {% if documentation_url %}
+        <a href="{% include link-url.html url=documentation_url %}"
+           class="project-button"
+           aria-label="Read {{ include.card.title | escape }} documentation">Read documentation</a>{% endif %}
+    </div>
+  </div>
+</article>

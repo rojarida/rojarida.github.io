@@ -1,8 +1,29 @@
 title: Roman Jay
 author: Roman Jay David
-url: "https://rojarida.github.io" 
+url: "https://rojarida.github.io"
 lang: en
 
+markdown: kramdown
 strict_front_matter: true
 liquid:
   error_mode: strict
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs
+  - scripts
+  - vendor
+
+collections:
+  writeups:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: writeup
+      featured: false
+      order: 100

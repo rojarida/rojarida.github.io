@@ -38,7 +38,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   color: var(--color-text);
   background-color: var(--color-page-bg);
 }
@@ -70,6 +70,15 @@ section {
   scroll-margin-top: var(--header-height);
 }
 
+.section-shell {
+  min-height: calc(100vh - var(--header-height));
+  padding: 2rem 0;
+}
+
+.section-shell--light {
+  background-color: var(--color-section-bg);
+}
+
 .section-heading {
   margin: 0 auto 5rem;
   text-align: center;
@@ -86,6 +95,13 @@ section {
   color: var(--color-text-muted);
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+.surface-card {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-surface);
 }
 
 .site-footer {
@@ -111,6 +127,7 @@ section {
   }
 }
 
+/* Keyboard navigation and written pages. */
 :focus-visible {
   outline: 3px solid #002ead;
   outline-offset: 4px;
@@ -129,10 +146,15 @@ section {
   top: 0.5rem;
 }
 
+.prose {
+  max-width: 75ch;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
 button {
   font: inherit;
 }
-
 p,
 h1,
 h2,

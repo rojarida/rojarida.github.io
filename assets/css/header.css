@@ -188,12 +188,15 @@
     position: static;
     height: auto;
   }
+
   .site-nav:not(.nav-enhanced) {
     padding-top: var(--header-height);
   }
+
   .site-nav:not(.nav-enhanced) .site-brand {
     top: 25px;
   }
+
   .site-nav:not(.nav-enhanced) .nav-links {
     position: static;
     width: 100%;

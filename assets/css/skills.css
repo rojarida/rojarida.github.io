@@ -109,7 +109,6 @@
 .skill-card-toggle {
   list-style: none;
 }
-
 .skill-card-toggle::-webkit-details-marker {
   display: none;
 }

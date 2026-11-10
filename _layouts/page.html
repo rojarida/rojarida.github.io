@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<section class="section-shell"{% if page.section_id %} id="{{ page.section_id | escape }}"{% endif %}>
+  <div class="page-width">
+    {% include section-heading.html section=page heading_tag="h1" %}
+    <div class="prose">{{ content }}</div>
+  </div>
+</section>
