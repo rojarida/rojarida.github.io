@@ -1,5 +1,5 @@
 <div class="{{ include.class }}">
   {% for tag in include.tags %}
-    <span{% if include_item_class %} class="{{ include.item_class }}"{% endif %}>{{ tag | escape }}</span>
+    <span{% if include.item_class %} class="{{ include.item_class }}"{% endif %}>{{ tag | escape }}</span>
   {% endfor %}
 </div>
