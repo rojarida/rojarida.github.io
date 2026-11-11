@@ -1,67 +1,121 @@
 ---
 title: Skills
 description: >-
-  Technical skills I've developed through curiosity, independent learning, and personal projects.
+  Skills developed through independent learning, hands-on infrastructure projects, and a Customer Success Engineer
+  internship at Rubrik.
+# Optional per-skill format:
+#   - name: Python
+#     experience_context: projects
+# Omit experience_context for a neutral badge. Plain strings remain supported.
+
+context_description: Badge borders indicate where I've applied or studied each skill.
+experience_contexts:
+  internship:
+    label: Internship
+    color: "#57b9ff"
+    text_color: "#ffffff"
+  projects:
+    label: Personal Projects & Practice
+    color: "#da2c43"
+    text_color: "#ffffff"
+  study:
+    label: Certifications & Coursework
+    color: "#0bda51"
+    text_color: "#ffffff"
+
 categories:
   - name: Linux & System Administration
     icon: fa-solid fa-terminal
     skills:
-      - RHEL / Ubuntu 
-      - SELinux
-      - SSH
-      - User Management
-      - Service Management
-      - System Security
-      - System Troubleshooting
+      - name: RHEL
+        experience_context: study
+      - name: Ubuntu Server
+        experience_context: study
+      - name: Linux Troubleshooting
+        experience_context: internship
+      - name: Users & Permissions
+        experience_context: projects
+      - name: Service Management
+        experience_context: projects
 
   - name: Networking
     icon: fa-solid fa-network-wired
     skills:
-      - TCP/IP
-      - Subnetting
-      - Routing & Switching
-      - DNS
-      - DHCP
-      - VLANs
-      - Firewall
-      - Network Troubleshooting
+      - name: Network Troubleshooting
+        experience_context: projects
+      - name: TCP/IP
+        experience_context: projects
+      - name: Routing & Switching
+        experience_context: study
+      - name: Subnetting
+        experience_context: study
+      - name: VLANs
+        experience_context: study
+      - name: DNS
+        experience_context: internship
+      - name: DHCP
+        experience_context: projects
 
-  - name: Virtualization & Containers
+  - name: Virtualization & Deployment
     icon: fa-solid fa-server
     skills:
-      - VMware vSphere
-      - VMware ESXi
-      - Proxmox VE
-      - KVM / QEMU
-      - LXC
-      - Virtual Networking
+      - name: VMware vSphere
+        experience_context: internship
+      - name: Proxmox VE
+        experience_context: projects
+      - name: KVM / QEMU
+        experience_context: projects
+      - name: PXE Boot
+        experience_context: projects
+      - name: Disk Imaging
+        experience_context: projects
+      - name: LXC
+        experience_context: projects
 
-  - name: Storage & Deployment
-    icon: fa-solid fa-database
+  - name: Storage & Recovery
+    icon: fa-solid fa-hard-drive
     skills:
-      - RAID
-      - NAS / SAN
-      - iSCSI
-      - NFS / SMB
-      - Backup & Recovery
-      - Disk Imaging
+      - name: Backup & Recovery
+        experience_context: internship
+      - name: RAID
+        experience_context: projects
+      - name: NAS
+        experience_context: projects
+      - name: NFS
+        experience_context: internship
+      - name: SMB
+        experience_context: projects
+      - name: iSCSI
+        experience_context: internship
 
-  - name: Programming & Development
+  - name: Scripting & Development
     icon: fa-solid fa-code
     skills:
-      - Git
-      - Bash
-      - Python
-      - C++
-      - SQL
-      - PostgreSQL
+      - name: Bash
+        experience_context: internship
+      - name: Python
+        experience_context: projects
+      - name: Git
+        experience_context: projects
+      - name: SQL
+        experience_context: projects
+      - name: C++
+        experience_context: study
+      - name: PostgreSQL
+        experience_context: study
 
-  - name: Professional Tools & Platforms
+  - name: IT Support & Platforms
     icon: fa-solid fa-briefcase
     skills:
-      - Salesforce
-      - Jira
-      - Confluence
-      - Ticketing Systems
-      - Knowledge Base Systems
-      - Technical Documentation
+      - name: Technical Documentation
+        experience_context: internship
+      - name: Active Directory
+        experience_context: projects
+      - name: Windows Server
+        experience_context: projects
+      - name: Salesforce
+        experience_context: internship
+      - name: Jira
+        experience_context: internship
+      - name: Confluence
+        experience_context: internship

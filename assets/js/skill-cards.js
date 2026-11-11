@@ -20,10 +20,8 @@ export function initSkillCards() {
     }
 
     function setExpanded(open) {
-      // Scroll alongside the collapse, rather than waiting for its final toggle event.
       if (!open) scrollHeadingIntoView();
 
-      // Measure before cancelling so quick clicks reverse from the current height.
       const startHeight = card.open ? content.getBoundingClientRect().height : 0;
       animation?.cancel();
       expanded = open;
@@ -42,7 +40,6 @@ export function initSkillCards() {
         return;
       }
 
-      // Keep <details> open until shrinking finishes, then let it hide the content.
       animation = content.animate(
         [{ height: `${startHeight}px` }, { height: `${open ? content.scrollHeight : 0}px` }],
         { duration: 280, easing: "ease-in-out", fill: "both" },
@@ -58,7 +55,12 @@ export function initSkillCards() {
         return;
       }
 
-      // Leave text selection and any future links or controls alone.
+      const contextBadge = event.target.closest(".skill-badge--context");
+      if (contextBadge && card.contains(contextBadge)) {
+        contextBadge.focus({ preventScroll: true });
+        return;
+      }
+
       const control = event.target.closest("a, button, input, select, textarea, label, [contenteditable], [tabindex]");
       if (!card.open || (control && card.contains(control))) return;
       if (window.getSelection()?.isCollapsed === false) return;

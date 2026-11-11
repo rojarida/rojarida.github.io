@@ -7,6 +7,18 @@
     <span class="skill-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
   </summary>
   <div class="skill-card-content">
-    {% include tags.html tags=include.card.skills class="skill-badges" item_class="skill-badge" %}
+    <div class="skill-badges">
+      {% for skill in include.card.skills %}
+        {% assign skill_name = skill.name | default: skill %}
+        {% assign context = nil %}
+        {% if skill.experience_context %}
+          {% assign context = site.data.skills.experience_contexts[skill.experience_context] %}
+        {% endif %}
+        <span class="skill-badge{% if context %} skill-badge--context{% endif %}"{% if context %} style="--context-color: {{ context.color | escape }}; --context-text: {{ context.text_color | default: '#ffffff' | escape }};" tabindex="0"{% endif %}>
+          {{ skill_name | escape }}
+          {% if context %}<span class="skill-context-label">{{ context.label | escape }}</span>{% endif %}
+        </span>
+      {% endfor %}
+    </div>
   </div>
 </details>

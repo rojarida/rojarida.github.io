@@ -1,0 +1,16 @@
+{% if site.data.skills.experience_contexts.size > 0 %}
+  <div class="skill-legend" aria-label="Skill experience context legend">
+    <p>{{ site.data.skills.context_description | escape }}</p>
+    <ul>
+      {% for entry in site.data.skills.experience_contexts %}
+        {% assign context = entry[1] %}
+        <li>
+          <span class="skill-legend-swatch"
+                style="--context-color: {{ context.color | escape }}"
+                aria-hidden="true"></span>
+          {{ context.label | escape }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
