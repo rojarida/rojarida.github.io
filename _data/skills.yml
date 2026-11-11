@@ -7,13 +7,12 @@ categories:
     icon: fa-solid fa-terminal
     skills:
       - RHEL / Ubuntu 
-      - Package Management
-      - Users, Groups & ACLs
       - SELinux
-      - Filesystems
-      - Remote Administration
+      - SSH
+      - User Management
+      - Service Management
+      - System Security
       - System Troubleshooting
-      - systemd
 
   - name: Networking
     icon: fa-solid fa-network-wired
@@ -24,40 +23,38 @@ categories:
       - DNS
       - DHCP
       - VLANs
-      - NAT
-      - VPNs
-      - Firewall Configuration
+      - Firewall
       - Network Troubleshooting
 
   - name: Virtualization & Containers
     icon: fa-solid fa-server
     skills:
-      - Proxmox VE
+      - VMware vSphere
       - VMware ESXi
-      - vSphere / vCenter
+      - Proxmox VE
       - KVM / QEMU
+      - LXC
       - Virtual Networking
-      - Snapshots
 
   - name: Storage & Deployment
     icon: fa-solid fa-database
     skills:
-      - NAS / SAN
       - RAID
+      - NAS / SAN
       - iSCSI
       - NFS / SMB
-      - PXE Boot
-      - Disk Imaging & Recovery
+      - Backup & Recovery
+      - Disk Imaging
 
   - name: Programming & Development
     icon: fa-solid fa-code
     skills:
+      - Git
+      - Bash
       - Python
       - C++
-      - Bash Scripting
       - SQL
       - PostgreSQL
-      - Git / GitHub
 
   - name: Professional Tools & Platforms
     icon: fa-solid fa-briefcase
@@ -65,6 +62,6 @@ categories:
       - Salesforce
       - Jira
       - Confluence
-      - Glean
+      - Ticketing Systems
       - Knowledge Base Systems
       - Technical Documentation
