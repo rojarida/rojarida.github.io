@@ -1,5 +1,14 @@
 export function initSkillCards() {
-  document.querySelectorAll(".skill-card").forEach((card) => {
+  const controls = document.querySelector(".skill-controls");
+  const expandAll = controls?.querySelector('[data-skill-action="expand"]');
+  const collapseAll = controls?.querySelector('[data-skill-action="collapse"]');
+
+  function updateControls() {
+    if (expandAll) expandAll.disabled = cards.every((card) => card.expanded);
+    if (collapseAll) collapseAll.disabled = cards.every((card) => !card.expanded);
+  }
+
+  const cards = Array.from(document.querySelectorAll(".skill-card"), (card) => {
     const summary = card.querySelector("summary");
     const content = card.querySelector(".skill-card-content");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -19,12 +28,14 @@ export function initSkillCards() {
       });
     }
 
-    function setExpanded(open) {
-      if (!open) scrollHeadingIntoView();
+    function setExpanded(open, { scroll = true } = {}) {
+      if (open === expanded) return;
+      if (!open && scroll) scrollHeadingIntoView();
 
       const startHeight = card.open ? content.getBoundingClientRect().height : 0;
       animation?.cancel();
       expanded = open;
+      updateControls();
       card.classList.toggle("is-closing", !open);
       card.open = true;
 
@@ -47,8 +58,13 @@ export function initSkillCards() {
       animation.onfinish = finish;
     }
 
+    card.addEventListener("toggle", () => {
+      if (animation) return;
+      expanded = card.open;
+      updateControls();
+    });
+
     card.addEventListener("click", (event) => {
-      // Keyboard activation also produces a click on the native summary.
       if (summary.contains(event.target)) {
         event.preventDefault();
         setExpanded(!expanded);
@@ -68,5 +84,23 @@ export function initSkillCards() {
       setExpanded(!expanded);
       summary.focus({ preventScroll: true });
     });
+
+    return {
+      setExpanded,
+      get expanded() {
+        return expanded;
+      },
+    };
   });
+
+  expandAll?.addEventListener("click", () => {
+    cards.forEach((card) => card.setExpanded(true, { scroll: false }));
+  });
+
+  collapseAll?.addEventListener("click", () => {
+    cards.forEach((card) => card.setExpanded(false, { scroll: false }));
+  });
+
+  updateControls();
+  if (controls && cards.length) controls.hidden = false;
 }

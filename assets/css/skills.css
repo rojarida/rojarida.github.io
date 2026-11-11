@@ -45,6 +45,45 @@
   border-radius: var(--radius-pill);
 }
 
+.skill-controls:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 2rem;
+}
+
+.skills-section:has(.skill-controls:not([hidden])) .skill-legend {
+  margin-bottom: 1.5rem;
+}
+
+.skill-controls button {
+  min-height: 2.75rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.skill-controls button:hover:not(:disabled) {
+  background: var(--color-surface-soft);
+  border-color: var(--color-text-muted);
+}
+
+.skill-controls button:disabled {
+  color: var(--color-text-muted);
+  background: var(--color-surface-soft);
+  opacity: 0.65;
+  cursor: default;
+}
+
 .skill-card {
   width: 100%;
   max-width: 30rem;

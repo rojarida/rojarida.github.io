@@ -20,7 +20,11 @@ home: true
   <div class="page-width wide">
     {% include section-heading.html section=site.data.skills %}
     {% include skill-legend.html %}
-    <div class="skills-grid card-row card-row--three">
+    <div class="skill-controls" role="group" aria-label="Skill card controls" hidden>
+      <button type="button" data-skill-action="expand" aria-controls="skills-grid">Expand all</button>
+      <button type="button" data-skill-action="collapse" aria-controls="skills-grid">Collapse all</button>
+    </div>
+    <div class="skills-grid card-row card-row--three" id="skills-grid">
       {% for card in site.data.skills.categories %}
         {% include skill-card.html card=card %}
       {% endfor %}
