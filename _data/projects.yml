@@ -46,7 +46,7 @@ labs:
       - Domain Services
       - Windows Server
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/tree/main/projects/enterprise-simulation/active-directory#readme
+    documentation_url: https://github.com/rojarida/homelab/tree/main/archive/projects/enterprise-simulation/active-directory
 
   - title: Windows Server 2025 VM Setup
     description:
@@ -58,7 +58,7 @@ labs:
       - Virtualization
       - Lab Build
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/windows-server-2025#readme
+    documentation_url: https://github.com/rojarida/homelab/tree/main/archive/virtualization/windows-server-2025
 
   - title: pfSense Setup
     description:
@@ -71,7 +71,7 @@ labs:
       - Firewall
       - DHCP
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/tree/main/pfSense/setup#readme
+    documentation_url: https://github.com/rojarida/homelab/tree/main/archive/pfSense/setup
 
   - title: Group Policy in Active Directory
     description:
@@ -83,7 +83,7 @@ labs:
       - Windows Server
       - Organizational Units
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/blob/main/projects/enterprise-simulation/active-directory/tasks/create-group-policy.md
+    documentation_url: https://github.com/rojarida/homelab/blob/main/archive/projects/enterprise-simulation/active-directory/tasks/create-group-policy.md
 
   - title: Ubuntu VM Deployment
     description:
@@ -94,7 +94,7 @@ labs:
       - QEMU/KVM
       - Virtualization
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/ubuntu#readme
+    documentation_url: https://github.com/rojarida/homelab/tree/main/archive/virtualization/ubuntu
 
   - title: Windows 11 VM Deployment
     description:
@@ -105,4 +105,4 @@ labs:
       - Domain Join
       - Virtualization
     category: Homelab
-    documentation_url: https://github.com/rojarida/homelab/tree/main/virtualization/windows-11#readme
+    documentation_url: https://github.com/rojarida/homelab/tree/main/archive/virtualization/windows-11
